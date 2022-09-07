@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nueva Tarjeta</title>
 </head>
+
 <body>
-    
+    <h1>Nueva tarjeta</h1>
+    <form action="#" method="post">
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" id="alias" maxlength="20" placeholder="Alias"><br>
+        <label for="numeroTar">Número tarjeta</label>
+        <input type="text" name="numeroTar" id="numeroTar" maxlength="20" placeholder="Número de tarjeta" required><br>
+        <label for="codigoCvv">Código</label>
+        <input type="text" name="codigoCvv" id="codigoCvv" maxlength="3" placeholder="Cod." required><br>
+        <label for="vencimiento">Vencimiento</label>
+        <input type="text" name="vencimiento" id="vencimiento" placeholder="Vto." required><br> 
+        <label for="titular">Nombre titular</label>
+        <input type="text" name="titular" id="titular" required placeholder="Nombre titular"><br>
+        <button>Guardar</button>
+    </form>
 </body>
+
 </html>
