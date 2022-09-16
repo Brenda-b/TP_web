@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+*{
+    font-family: 'Manrope', sans-serif;
+}
+
 h1 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -17,6 +23,7 @@ body {
     padding: 30px;
     justify-self: right;
 }
+
 
 .percentage {
 
