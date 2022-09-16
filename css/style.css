@@ -2,6 +2,7 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: right;
+    padding-right: 10px;
 }
 
 body {
@@ -18,7 +19,9 @@ body {
 }
 
 .percentage {
-    margin-right: 77%;
+
+    margin-right: 76%;
+
 }
 
 .inline {
@@ -39,10 +42,10 @@ input {
     margin: 7px;
 }
 
-
 .textIcon{
+
     display: flex;
     justify-content: right;
-    align-content:inherit;
+    align-content: inherit;
     align-items: center;
 }
