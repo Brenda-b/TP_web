@@ -63,3 +63,33 @@ input {
     padding: 3px;
     margin: 7px;
 }
+.footerStyle{
+
+    padding-top: 50px;
+    background-color:#A6C48A;
+
+}
+footer{
+    color: black;
+
+}
+
+footer h3{
+    margin-bottom: 30px;
+    font-size: 800;
+
+}
+
+.footerAbove{
+    padding-top:50px;
+    background-color: blueviolet;
+}
+
+.footerCol{
+    margin-bottom: 50px;
+}
+
+.footerBelow{
+    padding: 25px 0;
+    background-color: tomato;
+}
