@@ -56,3 +56,11 @@ input {
     align-content: inherit;
     align-items: center;
 }
+
+.select{
+    width: 42%;
+    border-radius: 3px;
+    border-width: 1.8px;
+    padding: 3px;
+    margin: 7px;
+}
