@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
-*{
+* {
     font-family: 'Manrope', sans-serif;
 }
 
@@ -24,11 +24,8 @@ body {
     justify-self: right;
 }
 
-
 .percentage {
-
     margin-right: 76%;
-
 }
 
 .inline {
@@ -51,7 +48,7 @@ input {
     margin: 7px;
 }
 
-.textIcon{
+.textIcon {
 
     display: flex;
     justify-content: right;
