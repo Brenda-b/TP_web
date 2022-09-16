@@ -8,6 +8,7 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: right;
+    padding-right: 10px;
 }
 
 body {
@@ -23,8 +24,11 @@ body {
     justify-self: right;
 }
 
-.porcentual {
+
+.percentage {
+
     margin-right: 76%;
+
 }
 
 .inline {
@@ -45,9 +49,10 @@ input {
     margin: 7px;
 }
 
-.textoeicono{
+.textIcon{
+
     display: flex;
     justify-content: right;
-    align-content:inherit;
+    align-content: inherit;
     align-items: center;
 }
