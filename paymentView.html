@@ -14,46 +14,48 @@
           <h1>Pagar</h1>
         </article>
       </div>
-      <div class="justify">
-         <label for="tarjetas guardadas">Tarjetas guardadas</label>
-         <select name="tarjetas guardadas" id="numeroTar" required>
-                <option value="">--Seleccionar--</option>
-                <option value="1">tarjeta guardada1</option>
-                <option value="2">tarjeta guardada2</option>
-                <option value="3">tarjeta guardada3</option>
-         </select>
-         <br/>
-            <label for="tarjetas guardadas"> Nueva tarjeta</label>
-            <input type="checkbox" id="new-card" value="Nueva-tarjeta" />
-            <br/>
-            <label for="numeroTar">Número tarjeta</label>
+      <div class="justifyLeft">
+        <label for="tarjetas guardadas">Tarjetas guardadas</label>
+        <select name="tarjetas guardadas" id="numeroTar" required>
+          <option value="">--Seleccionar--</option>
+          <option value="1">tarjeta guardada1</option>
+          <option value="2">tarjeta guardada2</option>
+          <option value="3">tarjeta guardada3</option>
+        </select>
+        <br/>
+        <label for="tarjetas guardadas"> Nueva tarjeta</label>
+          <input type="checkbox" id="new-card" value="Nueva-tarjeta" />
+        <br/>
+        <div class="justifyLeft">
+          <label for="numeroTar">Número tarjeta</label>
             <input type="text" name="numeroTar" id="numeroTar" maxlength="16" size="15" placeholder="Número de tarjeta" required/>
-            <br/>
-            <section class="inlines">
-                <label for="codigoCvv">Código</label>
-                <input type="text" name="codigoCvv" id="codigoCvv" size="1" maxlength="4" placeholder="Cod." required/>
-                <label for="vencimiento">Vencimiento</label>
-                <inputS type="text" name="vencimiento" id="vencimiento" size="1" placeholder="Vto." required/>
-            </section>    
-            <br/>
-            <label for="titular">Nombre titular</label>
+          <br/>
+          <section class="inlines">
+            <label for="codigoCvv">Código</label>
+              <input type="text" name="codigoCvv" id="codigoCvv" size="3" maxlength="4" placeholder="Cod." required/>
+            <label for="vencimiento">Vencimiento</label>
+              <input type="text" name="vencimiento" id="vencimiento" size="3" placeholder="Vto." required/>
+          </section>    
+          <br/>
+          <label for="titular">Nombre titular</label>
             <input type="text" name="titular" id="titular" required placeholder="Nombre titular"/>
-            <br/>
-            <label for="direcciones guardadas">Direcciones guardadas</label>
-            <select name="direcciones guardadas" id="direccion" required>
-                <option value="">--Seleccionar--</option>
-                <option value="1">Direccion guardada1</option>
-                <option value="2">Direccion guardada2</option>
-                <option value="3">Direccion guardada3</option>
-            </select>
-            <br/>
-            <label for="direcciones guardadas"> Nueva direccion</label>
-            <input type="checkbox" id="new-adress" value="Nueva-direccion"/>
-            <br/>
-            <div class="button">
-                <input type="submit" value="Guardar"/>
-            </div>
+          <br/>
         </div>
+        <label for="direcciones guardadas">Direcciones guardadas</label>
+        <select name="direcciones guardadas" id="direccion" required>
+          <option value="">--Seleccionar--</option>
+          <option value="1">Direccion guardada1</option>
+          <option value="2">Direccion guardada2</option>
+          <option value="3">Direccion guardada3</option>
+        </select>
+        <br/>
+        <label for="direcciones guardadas"> Nueva direccion</label>
+          <input type="checkbox" id="new-adress" value="Nueva-direccion"/>
+        <br/>
+        <div class="button">
+          <input type="submit" value="Pagar"/>
+        </div>
+      </div>
     </section>
   </body>
 </html>
