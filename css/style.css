@@ -19,7 +19,9 @@ body {
 }
 
 .percentage {
+
     margin-right: 76%;
+
 }
 
 .inline {
@@ -40,7 +42,8 @@ input {
     margin: 7px;
 }
 
-.textIcon {
+.textIcon{
+
     display: flex;
     justify-content: right;
     align-content: inherit;
