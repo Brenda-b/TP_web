@@ -5,24 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Nueva Tarjeta</title>
 </head>
 
 <body>
-    <h1>Nueva tarjeta</h1>
-    <form action="#" method="post">
-        <label for="alias">Alias</label>
-        <input type="text" name="alias" id="alias" maxlength="20" placeholder="Alias"><br><br>
-        <label for="numeroTar">Número tarjeta</label>
-        <input type="text" name="numeroTar" id="numeroTar" maxlength="20" placeholder="Número de tarjeta" required><br><br>
-        <label for="codigoCvv">Código</label>
-        <input type="text" name="codigoCvv" id="codigoCvv" maxlength="3" placeholder="Cod." required>
-        <label for="vencimiento">Vencimiento</label>
-        <input type="text" name="vencimiento" id="vencimiento" placeholder="Vto." required><br><br>
-        <label for="titular">Nombre titular</label>
-        <input type="text" name="titular" id="titular" required placeholder="Nombre titular"><br><br>
-        <input type="submit" value="Guardar">
-    </form>
+    <section class="border porcentual">
+        <div class="textoeicono">
+            <article>
+                <h1>Nueva tarjeta</h1>
+            </article>
+            <article><img src="img/baseline_credit_card_black_24dp.png" alt="Icono de tarjeta"></article>
+        </div>
+        <form action="#" method="post">
+            <div class="justify">
+                <label for="alias">Alias</label>
+                <input type="text" name="alias" id="alias" maxlength="20" size="15" placeholder="Alias"><br>
+                <label for="numeroTar">Número tarjeta</label>
+                <input type="text" name="numeroTar" id="numeroTar" maxlength="16" size="15" placeholder="Número de tarjeta"
+                    required><br>
+                <section class="inline">
+                    <label for="codigoCvv">Código</label>
+                    <input type="text" name="codigoCvv" id="codigoCvv" size="1" maxlength="3" placeholder="Cod."
+                        required>
+                    <label for="vencimiento">Vencimiento</label>
+                    <input type="text" name="vencimiento" id="vencimiento" placeholder="Vto." size="2" maxlength="5"
+                        required><br>
+                </section>
+                <label for="titular">Nombre titular</label>
+                <input type="text" name="titular" id="titular" required placeholder="Nombre titular"><br>
+                <div class="button">
+                    <input type="submit" value="Guardar">
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>

@@ -1,0 +1,47 @@
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+body {
+    margin: 20px;
+}
+
+.border {
+    border-color: black;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+    padding: 30px;
+    justify-self: right;
+}
+
+.porcentual {
+    margin-right: 67%;
+}
+
+.inline {
+    display: flex;
+    margin-right: auto;
+    justify-content: right;
+    align-items: center;
+}
+
+.justify {
+    text-align: right;
+}
+
+input {
+    border-radius: 3px;
+    border-width: 1.8px;
+    padding: 3px;
+    margin: 7px;
+}
+
+.textoeicono{
+    display: flex;
+    justify-content: right;
+    align-content:inherit;
+    align-items: center;
+}
