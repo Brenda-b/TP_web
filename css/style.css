@@ -41,7 +41,9 @@ body {
 .justify {
     text-align: right;
 }
-
+.justifyLeft {
+    text-align: left;
+}
 input {
     border-radius: 3px;
     border-width: 1.8px;
