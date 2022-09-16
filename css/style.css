@@ -17,8 +17,8 @@ body {
     justify-self: right;
 }
 
-.porcentual {
-    margin-right: 67%;
+.percentage {
+    margin-right: 77%;
 }
 
 .inline {
@@ -39,7 +39,8 @@ input {
     margin: 7px;
 }
 
-.textoeicono{
+
+.textIcon{
     display: flex;
     justify-content: right;
     align-content:inherit;
