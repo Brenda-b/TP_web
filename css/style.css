@@ -47,6 +47,12 @@ input {
     padding: 3px;
     margin: 7px;
 }
+textarea{
+    border-radius: 3px;
+    border-width: 1.8px;
+    padding: 3px;
+    margin: 7px;
+}
 
 .textIcon {
 
@@ -93,3 +99,23 @@ footer h3{
     padding: 25px 0;
     background-color: tomato;
 }
+
+.boxLeft{
+    margin-right: auto;
+    flex-basis: 35%;
+    text-align:  right;
+
+}
+.submit{
+    width:100px; 
+    height:25px;
+}
+.boxRight{
+    margin-right: auto; 
+    flex-basis: auto;  
+}
+.map{
+   text-align: center;
+}
+
+
