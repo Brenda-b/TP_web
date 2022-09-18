@@ -52,6 +52,9 @@ body {
 .justifyLeft {
     text-align: left;
 }
+.justifyCenter{
+    text-align: center;
+}
 
 input {
     border-radius: 3px;
@@ -103,15 +106,6 @@ footer h3 {
     padding: 20px;
     align-items: center;
     justify-content: center;
-}
-
-.col-md-3{
-    text-align: center;
-}
-
-.footerBelow{
-    padding: 25px 0;
-    background-color: tomato;
 }
 
 .boxLeft{
