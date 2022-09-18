@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
+
 <body>
-    
+    <section class="border percentage">
+        <div class="justifyCenter">
+            <img src="img/logo.png" alt="">
+            <form action="#" method="get" autocomplete="off">
+                <div class="justifyLeft">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese usuario" required
+                        class="separe1"><br>
+                </div>
+
+                <div class="justifyLeft">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese contraseña" required
+                        class="separe2">
+                </div>
+
+                <p class="separe1"><a href="#">¿Olvidaste la contraseña?</a></p>
+                <input type="submit" value="LOGIN" class="submit">
+            </form>
+            <p>¿No tenés cuenta? <a href="newUser.html">Registrate</a></p>
+        </div>
+    </section>
 </body>
+
 </html>

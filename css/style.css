@@ -41,7 +41,16 @@ body {
 .justifyLeft {
     text-align: left;
 }
+.justifyCenter{
+    text-align: center;
+}
 input {
+    border-radius: 3px;
+    border-width: 1.8px;
+    padding: 3px;
+    margin: 7px;
+}
+textarea{
     border-radius: 3px;
     border-width: 1.8px;
     padding: 3px;
@@ -92,4 +101,38 @@ footer h3{
 .footerBelow{
     padding: 25px 0;
     background-color: tomato;
+}
+
+.boxLeft{
+    margin-right: auto;
+    text-align:  left;
+    margin: 100px;
+}
+.submit{
+    width:100px; 
+    height:25px;
+}
+.boxRight{
+    text-align: left;
+    margin: 100px;
+}
+.map{
+   text-align: center;
+}
+
+.separe1{
+    margin-left: 33%;
+}
+.separe2{
+    margin-left: 25%;
+}
+.separe3{
+    margin-left: 10%;
+}
+.inline2 {
+    display: flex;
+    justify-content: center;
+}
+.socialNetworks{
+    line-height: 12px;
 }
