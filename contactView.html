@@ -11,40 +11,45 @@
 
 <body>
     <main>
-        <h1>Contacto</h1>
-        <section>
-            <article>
+        <h1 class="justifyCenter">Contacto</h1>
+        <section class="inline2">
+            <article class="boxLeft">
                 <form action="#" method="get" autocomplete="off">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required><br>
-
-                    <label for="email">Email</label>
-                    <input type="email" name="mail" id="mail" placeholder="Email" required><br>
-
-                    <label for="comentarios">Comentario</label> <br>
-                    <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Comentarios"
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required><br>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required class="separe3"><br>
+                    </div>
+                    <label for="comentarios">Comentarios</label> <br>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="5" placeholder="Comentarios"
                         required></textarea><br>
-                    <input type="button" value="Enviar">
+                    <div class="justify">
+                        <input type="submit" value="Enviar" class="submit">
+                    </div>
                 </form>
             </article>
 
-            <article>
-                <h2>Donde nos encontramos...</h2>
-                <p>Dirección: Calle Falsa 123</p>
-                <p>Teléfono: 4480-8900</p>
-                <p>Horarios de atención: Lunes a sábados de 08:00 a 19:00 hs</p>
-            </article>
-
-            <article>
+            <article class="boxRight">
+                <div class="socialNetworks">
+                    <h2>Donde nos encontramos...</h2>
+                    <p>Dirección: Calle Falsa 123</p>
+                    <p>Teléfono: 4480-8900</p>
+                    <p>Horarios de atención: Lunes a sábados de 08:00 a 19:00 hs</p>
+                </div>
                 <p>Instagram: <a href="https://www.instagram.com/" target="_blank">Supermercadocoti.ok</a></p>
                 <p>Facebook: <a href="https://www.facebook.com/" target="_blank">Supermercados Coti</a></p>
                 <p>Whatsapp: <a href="https://web.whatsapp.com/" target="_blank">+15xxxxxxxx</a></p>
+
+
             </article>
         </section>
         <section>
-            <article><iframe
+            <article class="map"><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.77696466800387!2d-58.562929365091634!3d-34.670882556100125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1663367651583!5m2!1ses-419!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="1100" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe></article>
         </section>
     </main>
@@ -78,9 +83,11 @@
                 <li>
                     <img src="img/logo-instagram.png" alt="Logo de Instagram">
                 </li>
+
             </ul>
             <br>
         </div>
     </div>
 </footer>
+
 </html>
