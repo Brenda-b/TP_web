@@ -108,15 +108,6 @@ footer h3 {
     justify-content: center;
 }
 
-.col-md-3{
-    text-align: center;
-}
-
-.footerBelow{
-    padding: 25px 0;
-    background-color: tomato;
-}
-
 .boxLeft{
     margin-right: auto;
     text-align:  left;
