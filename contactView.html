@@ -10,18 +10,53 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navLogo">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <div class="search">
+                <form action="#">
+                    <input type="text" name="buscar" id="buscar" placeholder="Buscar..." size="100">
+                    <button>
+                        <img src="img/icono-lupa.png" alt="lupa">
+                    </button>
+                </form>
+            </div>
+            <div class="cart">
+                <a href="cartView.html"><img src="img/icono-carrito.png" alt="carrito"></a>
+            </div>
+        </nav>
+        <nav>
+            <div class="navlist">
+                <form action="index.html">
+                    <button>Home</a></button>
+                </form>
+                <form action="categoriesView.html">
+                    <button>Categorías</button>
+                </form>
+                <form action="contactView.html">
+                    <button>Contacto</button>
+                </form>
+                <form action="UserProfile.html">
+                    <button>Mi cuenta</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
     <main>
-        <h1 class="justifyCenter">Contacto</h1>
+        <h1 class="titleContact">Contacto</h1>
         <section class="inline2">
             <article class="boxLeft">
                 <form action="#" method="get" autocomplete="off">
                     <div>
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required><br>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required size="21"><br>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email" required class="separe3"><br>
+                        <input type="email" name="email" id="email" placeholder="Email" required class="separe3" size="21"><br>
                     </div>
                     <label for="comentarios">Comentarios</label> <br>
                     <textarea name="comentarios" id="comentarios" cols="30" rows="5" placeholder="Comentarios"
@@ -32,7 +67,7 @@
                 </form>
             </article>
 
-            <article class="boxRight">
+            <article>
                 <div class="socialNetworks">
                     <h2>Donde nos encontramos...</h2>
                     <p>Dirección: Calle Falsa 123</p>
@@ -49,44 +84,44 @@
         <section>
             <article class="map"><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.77696466800387!2d-58.562929365091634!3d-34.670882556100125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1663367651583!5m2!1ses-419!2sar"
-                    width="1100" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="1500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe></article>
         </section>
     </main>
-</body>
 
-<footer class="footerStyle">
-    <div class="container">
-        <div class="footerCol">
-            <article><img src="img/logo.png" width="200px"></article>
-            <article>
-                <p>Lunes a Domingos<br>de 8:00 a 19:00hs.</p>
-            </article>
+    <footer class="footerStyle">
+        <div class="container">
+            <div class="footerCol">
+                <article><img src="img/logo.png" width="200px"></article>
+                <article>
+                    <p>Lunes a Domingos<br>de 8:00 a 19:00hs.</p>
+                </article>
+            </div>
+            <div class="footerCol">
+                <article>
+                    <h3>Datos del grupo:</h3>
+                </article>
+                <article>
+                    <p>Miranda, Patricio<br>Barilari, Rosa Cruz<br>Bustos, Brenda</p>
+                </article>
+            </div>
+            <div class="footerCol">
+                <h3>Seguinos en:</h3>
+                <ul class="inline">
+                    <li>
+                        <img src="img/logo-facebook.png" alt="Logo de Facebook">
+                    </li>
+                    <li>
+                        <img src="img/logo-twitter.png" alt="Logo de Twitter">
+                    </li>
+                    <li>
+                        <img src="img/logo-instagram.png" alt="Logo de Instagram">
+                    </li>
+                </ul>
+                <br>
+            </div>
         </div>
-        <div class="footerCol">
-            <article>
-                <h3>Datos del grupo:</h3>
-            </article>
-            <article>
-                <p>Miranda, Patricio<br>Barilari, Rosa Cruz<br>Bustos, Brenda</p>
-            </article>
-        </div>
-        <div class="footerCol">
-            <h3>Seguinos en:</h3>
-            <ul class="inline">
-                <li>
-                    <img src="img/logo-facebook.png" alt="Logo de Facebook">
-                </li>
-                <li>
-                    <img src="img/logo-twitter.png" alt="Logo de Twitter">
-                </li>
-                <li>
-                    <img src="img/logo-instagram.png" alt="Logo de Instagram">
-                </li>
-            </ul>
-            <br>
-        </div>
-    </div>
-</footer>
+    </footer>
+</body>
 
 </html>
