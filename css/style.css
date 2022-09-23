@@ -12,7 +12,16 @@ h1 {
 }
 
 body {
+    margin-top: 9%;
     padding: 0;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
 .border {
@@ -111,9 +120,10 @@ textarea{
 }
 
 .footerStyle {
-    padding-top: 30px;
     background-color: #A6C48A;
-    margin: auto;
+    padding: 40px;
+    border: black 3px;
+    border-style: solid;
 }
 
 footer h3 {
@@ -161,6 +171,7 @@ footer h3 {
     cursor: pointer;
     float: left; 
     width: 25%;
+    transition: all 0.5s;
   }
 .navlist button:hover{
     background-color: #140D4F;
