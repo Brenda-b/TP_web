@@ -52,11 +52,11 @@ body {
 .justifyLeft {
     text-align: left;
 }
-#usuario1{
+#user1{
     position: relative;
     left: 130px;
 }
-#contrasenia1{
+#password1{
     position: relative;
     left: 100px;
 }
@@ -64,7 +64,7 @@ body {
     position: relative;
     left: 27px;
 }
-#nombre1{
+#name1{
     position: relative;
     left: 7px;
 }
