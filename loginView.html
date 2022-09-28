@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../TP_web/img/icono-hoja.svg">
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
@@ -13,19 +14,21 @@
     <section class="border percentage">
         <div class="justifyCenter">
             <img src="img/logo.png" alt="">
+        </div>
+        <div class="justifyLeft">
             <form action="#" method="get" autocomplete="off">
-                <div class="justifyLeft">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" name="usuario" id="user1" placeholder="Ingrese usuario" required><br>
+                <div>
+                    <label for="user1">Usuario</label>
+                    <input type="text" name="user1" id="user1" placeholder="Ingrese usuario" required><br>
                 </div>
-
-                <div class="justifyLeft">
-                    <label for="contrasenia">Contraseña</label>
-                    <input type="password" name="contrasenia" id="password" placeholder="Ingrese contraseña" required>
+                <div id="password2">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Ingrese contraseña" required>
                 </div>
-
-                <p><a href="#">¿Olvidaste la contraseña?</a></p>
-                <input type="submit" value="LOGIN" class="submit">
+        </div>
+        <div class="justifyCenter">
+            <p><a href="#">¿Olvidaste la contraseña?</a></p>
+            <input type="submit" value="LOGIN" class="submit">
             </form>
             <p>¿No tenés cuenta? <a href="newUser.html">Registrate</a></p>
         </div>
