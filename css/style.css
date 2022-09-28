@@ -15,6 +15,9 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 9%;
+    background-image: url(../img/fondo.png);
+    background-repeat: repeat-x;
+    background-color: #fff
 }
 
 header{
@@ -67,6 +70,14 @@ header{
     left: 130px;
 }
 #password1{
+    position: relative;
+    left: 100px;
+}
+#password2{
+    position: relative;
+    left: 0;
+}
+#password2 input{
     position: relative;
     left: 100px;
 }
@@ -147,12 +158,31 @@ footer h3 {
 .boxLeft{
     text-align:  left;
 }
-.submit{
+.submit button{
+    position: relative;
+    left: 1070px;
+    border-width: 1px;
+    border-radius: 5px;
     width:100px; 
     height:25px;
+    transition: all 0.5s;
 }
-.submit:hover{
-    background-color: #ccc;
+.submit button:hover{
+    background-color: #A6C48A;
+    color: #fff;
+}
+
+#contactSubmit{
+    text-align: right;
+}
+#contactSubmit input{
+    width:100px; 
+    height:25px;
+    transition: all 0.5s;
+}
+#contactSubmit input:hover{
+    background-color: #A6C48A;
+    color: #fff;
 }
 
 #map{
@@ -189,30 +219,55 @@ footer h3 {
     width: 170px;
     height: 75px;
     padding: 20px;
+    transition: all 0.5s;
+}
+.logo img:hover{
+	filter: opacity(0.5) drop-shadow(0 0 0 #140D4F);
+}
+
+.search{
+    position: relative;
 }
 
 .search input{
     height: 33px;
     font-size: 17px;
-    border: none;
+    border: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    text-indent: 50px;
 }
 .search button{
-    padding-top: 2px;
-    padding-bottom: 9px;
-    background: #ddd;
-    border: none;
+    position: absolute;
+    width: 40px;
+    height: 39px;
+    left: 9px;
+    top: 9px;
+    border-width: 0 1px 0 0 ;
+    background: white;
+    border-radius: 8px 0 0 8px;
     cursor: pointer;
-    border-radius: 5px;
+    background-image: url(../img/icono-lupa.svg);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
 }
-.search img{
-    transform: translateY(25%);
-}
+
 .search button:hover{
-    background: #ccc;
+    background: #678D58;
+    background-image: url(../img/icono-lupa.svg);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
-.cart{
-    padding: 20px;
-    padding-right: 30px;
+.cart img{
+    padding: 10px;
+    transition: all 0.5s;
+}
+.cart img:hover{
+    transform:scale(115%)
 }
 main{
     width: 80%;
@@ -256,6 +311,7 @@ main{
 }
 .buttonBuy button:hover{
     background-color: #A6C48A;
+    color: #fff;
 }
 #productID{
     background-image: url(../img/paquete-de-fideos.jpg);
@@ -383,9 +439,4 @@ main{
 }
 .table th:last-child{
     width: 15%;
-}
-.submitCart{
-    position: relative;
-    left: 1050px;
-    height: 25px;
 }
