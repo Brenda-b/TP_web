@@ -14,7 +14,7 @@ h1 {
 body {
     margin: 0;
     padding: 0;
-    margin-top: 9%;
+    margin-top: 14%;
     background-image: url(../img/fondo.png);
     background-repeat: repeat-x;
     background-color: #fff
@@ -439,4 +439,13 @@ main{
 }
 .table th:last-child{
     width: 15%;
+}
+
+.inlineUser {
+    display: flex;
+    justify-content:left;
+    
+}
+.nameUser{
+    margin-left: 3%;
 }
