@@ -449,3 +449,20 @@ main{
 .nameUser{
     margin-left: 3%;
 }
+.table2{
+    table-layout: fixed;
+    width: 80%;
+    border-collapse: collapse;
+}
+.table2 th{
+    background-color: #A6C48A;
+    border: 3px solid #678D58;
+    height: 40px;
+}
+.table2 td{
+    text-align: center;
+    border: 3px solid #A6C48A;
+}
+.table2 :last-child{
+    border:#fff;
+}
