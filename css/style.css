@@ -375,6 +375,50 @@ main {
     border-width: 1px;
     border-radius: 5px;
 }
+#paymentMethod1 {
+    background-image: url(../img/americanExpress.png);
+    width: 200px;
+    height: 170px;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#paymentMethod2 {
+    background-image: url(../img/maestro.png);
+    width: 250px;
+    height: 170px;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#paymentMethod3 {
+    background-image: url(../img/visaDebito.png);
+    width: 280px;
+    height: 170px;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#paymentMethod4 {
+    background-image: url(../img/visa.png);
+    width: 270px;
+    height: 170px;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
 
 #relatedProduct1 p {
     background-color: #A6C48A;
