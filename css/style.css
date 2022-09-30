@@ -165,6 +165,7 @@ footer h3 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px; 
 }
 
 .boxLeft {
@@ -581,7 +582,6 @@ main {
     width: 250px;
     height: 250px;
     position: relative;
-    border-style: solid;
     border-width: 1px;
     border-radius: 5px;
 }
