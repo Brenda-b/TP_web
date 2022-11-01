@@ -127,7 +127,7 @@ textarea {
 }
 
 .select {
-    width: 55%;
+    width: 42%;
     border-radius: 3px;
     border-width: 1.8px;
     padding: 3px;
@@ -170,6 +170,11 @@ footer h3 {
 
 .boxLeft {
     text-align: left;
+}
+
+.submit:hover{
+    background-color: #A6C48A;
+    color: #fff;
 }
 
 .submit button {
@@ -607,4 +612,9 @@ main {
 
 .table2 tr td:last-child {
     text-align: left;
+}
+
+.errorText{
+    text-align: left;
+    color: red;
 }
