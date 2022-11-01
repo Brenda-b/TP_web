@@ -10,19 +10,42 @@ form.addEventListener("submit", (e) => {
 function validar() {
     let error = false;
     const numTarjeta = document.querySelector("#numeroTar").value;
-    let suma=0;
+    let errorMessage = ""
+    let suma = 0;
 
-    for (var i = 0; i < numTarjeta.length-1; i++) {
+    for (var i = 0; i < numTarjeta.length - 1; i++) {
         suma += parseInt(numTarjeta[i]);
     }
-    console.log(suma);
 
-    if (regexTarjetaError.test(numTarjeta)) {
+    if (!regexTarjeta.test(numTarjeta)) {
+        //alert("No es un numero de tarjeta valido");
         error = true;
-        alert("No es un numero de tarjeta valido");
+        errorMessage += "<p>No es un numero de tarjeta valido</p>"
     } else if ((numTarjeta[numTarjeta.length - 1] % 2 == 0) && (suma % 2 != 0)) {
+        errorMessage += "<p>No es un numero de tarjeta valido</p>"
     } else if ((numTarjeta[numTarjeta.length - 1] % 2 != 0) && (suma % 2 == 0)) {
     } else {
-        alert("numero de tarjeta inválida");
+        error = true;
+        errorMessage += "<p>No es un numero de tarjeta valido</p>"
     }
+
+    if (error) {
+        document.getElementById("mensaje").innerHTML = errorMessage;
+    }
+    else {
+        submit();
+        document.getElementById("mensaje").innerHTML = "";
+    }
+
+}
+function submit() {
+    let metodoDePago = {
+        alias: document.getElementById("alias").value,
+        numero: document.getElementById("numeroTar").value,
+        codigo: document.getElementById("codigoCvv").value,
+        vencimiento: document.getElementById("vencimiento").value,
+        titular: document.getElementById("titular").value,
+    }
+    console.log(metodoDePago)
+    localStorage.setItem("NewCard", JSON.stringify(metodoDePago));
 }
