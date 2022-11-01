@@ -23,7 +23,7 @@
                 <label for="alias">Alias</label>
                 <input type="text" name="alias" id="alias" maxlength="20" size="22" placeholder="Alias"><br>
                 <label for="numeroTar">Número tarjeta</label>
-                <input type="text" name="numeroTar" id="numeroTar" maxlength="16" size="22"
+                <input type="text" name="numeroTar" id="numeroTar" maxlength="10" size="22"
                     placeholder="Número de tarjeta" required><br>
                 <section>
                     <label for="codigoCvv">Código</label>
@@ -38,6 +38,7 @@
                 <div class="button">
                     <input type="submit" value="Guardar">
                 </div>
+                <div id="mensaje" class="errorText"></div>
             </div>
         </form>
     </section>
