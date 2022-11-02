@@ -172,6 +172,9 @@ footer h3 {
     text-align: left;
 }
 
+.submit{
+    display: inline-flex;
+}
 .submit:hover{
     background-color: #A6C48A;
     color: #fff;
@@ -179,11 +182,11 @@ footer h3 {
 
 .submit button {
     position: relative;
-    left: 1070px;
+    left: 80em;
     border-width: 1px;
     border-radius: 5px;
-    width: 100px;
-    height: 25px;
+    width: 10em;
+    height: 2em;
     transition: all 0.5s;
 }
 
