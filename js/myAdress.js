@@ -14,7 +14,7 @@ function validar(){
     let depto = document.getElementById ("departamento").value;
     if (!regexNumero.test(telefono)){
         error = true;
-        errorMessaje += "<p>El formato del número no es correcto</p>";
+        errorMessaje += "<p>El formato del teléfono no es correcto</p>";
     }
     if (!regexNumero.test(piso)){
         error = true;
