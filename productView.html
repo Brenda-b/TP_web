@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icono-hoja.svg">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
     <title>Producto</title>
 </head>
 
@@ -48,23 +50,31 @@
         <section class="inline">
             <article>
                 <div id="productID">
-                    <p>$110</p>
+                    <p id="precio">$110</p>
                 </div>
             </article>
             <article>
                 <h2>Paquete de fideos Matarazzo</h2>
-                <p>Un paquete de fideos contiene pasta de trigo que se ha cocido en agua y sal. La pasta de trigo es un
-                </p>
-                <p>alimento básico en muchas culturas y se puede encontrar en diferentes formas y tamaños. Los fideos
-                </p>
-                <p>son una de las muchas formas en que se puede encontrar la pasta de trigo. La forma y el tamaño de</p>
-                <p>los fideos varían según la región y la tradición culinaria. Estos fideos son populares en Italia y
-                </p>
-                <p>se hacen con harina de trigo, agua y un poco de sal. Se pueden comprar fideos frescos o secos. Los
-                </p>
-                <p>fideos frescos se cocinan en agua hirviendo durante unos minutos y luego se sirven. Los fideos secos
-                </p>
-                <p>se deben cocinar un poco más, ya que tardan más en absorber el agua.</p>
+                <div id="descripcion">
+                    <p>Un paquete de fideos contiene pasta de trigo que se ha cocido en agua y sal. La pasta de trigo es
+                        un
+                    </p>
+                    <p>alimento básico en muchas culturas y se puede encontrar en diferentes formas y tamaños. Los
+                        fideos
+                    </p>
+                    <p>son una de las muchas formas en que se puede encontrar la pasta de trigo. La forma y el tamaño de
+                    </p>
+                    <p>los fideos varían según la región y la tradición culinaria. Estos fideos son populares en Italia
+                        y
+                    </p>
+                    <p>se hacen con harina de trigo, agua y un poco de sal. Se pueden comprar fideos frescos o secos.
+                        Los
+                    </p>
+                    <p>fideos frescos se cocinan en agua hirviendo durante unos minutos y luego se sirven. Los fideos
+                        secos
+                    </p>
+                    <p>se deben cocinar un poco más, ya que tardan más en absorber el agua.</p>
+                </div>
                 <div class="buttonBuy">
                     <form action="#">
                         <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="99">
@@ -74,25 +84,52 @@
             </article>
         </section><br><br><br>
 
-        <div>
-            <h3 class="justifyCenter">PRODUCTOS SIMILARES</h3>
-            <section class="inline2">
-                <article id="relatedProduct1">
+        <h3 class="justifyCenter">PRODUCTOS SIMILARES</h3>
+        <div class="slider">
+            <a href="javascript:void(0);" id="aceite_cocinero">
+                <div id="relatedProduct1">
                     <p>$110</p>
-                    <div>
-                        <h4>Aceite Cocinero</h4>
-                    </div>
-                </article>
-                <article id="relatedProduct2">
+                    <h4>Aceite Cocinero</h4>
+                </div>
+            </a>
+            <a href="javascript:void(0);" id="arroz_luchetti">
+                <div id="relatedProduct2">
                     <p>$110</p>
                     <h4>Arroz Luchetti</h4>
-                </article>
-                <article id="relatedProduct3">
+                </div>
+            </a>
+            <a href="javascript:void(0);" id="capelettinis_giacomo">
+                <div id="relatedProduct3">
                     <p>$110</p>
                     <h4>Capelettinis Giacomo</h4>
-                </article>
-            </section>
-        </div><br><br>
+                </div>
+            </a>
+            <a href="./productView.html" id="fideos_matarazzo">
+                <div id="relatedProduct4">
+                    <p>$100</p>
+                    <h4>Paquete de fideos matarazzo</h4>
+                </div>
+            </a>
+            <a href="">
+                <div id="relatedProduct3">
+                    <p>$110</p>
+                    <h4>Capelettinis Giacomo</h4>
+                </div>
+            </a>
+            <a href="">
+                <div id="relatedProduct3">
+                    <p>$110</p>
+                    <h4>Capelettinis Giacomo</h4>
+                </div>
+            </a>
+            <a href="">
+                <div id="relatedProduct3">
+                    <p>$110</p>
+                    <h4>Capelettinis Giacomo</h4>
+                </div>
+            </a>
+        </div>
+        <br><br>
     </main>
 
     <footer class="footerStyle">
@@ -130,4 +167,15 @@
     </footer>
 </body>
 <script src="js/productView.js"></script>
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>$(document).ready(function () {
+        $('.slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            autoplay: true,
+        });
+    });</script>
+
 </html>

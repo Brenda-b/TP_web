@@ -172,10 +172,11 @@ footer h3 {
     text-align: left;
 }
 
-.submit{
+.submit {
     display: inline-flex;
 }
-.submit:hover{
+
+.submit:hover {
     background-color: #A6C48A;
     color: #fff;
 }
@@ -373,18 +374,6 @@ main {
     border-radius: 10px 0px 0px 10px;
 }
 
-#relatedProduct1 {
-    background-image: url(../img/aceite-cocinero.webp);
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    margin: auto;
-    position: relative;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
 #paymentMethod1 {
     background-image: url(../img/americanExpress.png);
     width: 200px;
@@ -433,6 +422,53 @@ main {
     border-radius: 5px;
 }
 
+#relatedProduct1 {
+    background-image: url(../img/aceite-cocinero.webp);
+    width: 18em;
+    height: 18em;
+    background-size: cover;
+    border-style: solid;
+    position: relative;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+#relatedProduct2 {
+    background-image: url(../img/arroz-luccheti.jpg);
+    width: 18em;
+    height: 18em;
+    background-size: cover;
+    margin: auto;
+    border-style: solid;
+    position: relative;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+#relatedProduct3 {
+    background-image: url(../img/capeletinis.jpg);
+    width: 18em;
+    height: 18em;
+    background-size: cover;
+    margin: auto;
+    border-style: solid;
+    position: relative;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+#relatedProduct4 {
+    background-image: url(../img/paquete-de-fideos.jpg);
+    width: 18em;
+    height: 18em;
+    background-size: cover;
+    margin: auto;
+    border-style: solid;
+    position: relative;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
 #relatedProduct1 p {
     background-color: #A6C48A;
     padding: 10px;
@@ -449,18 +485,6 @@ main {
     position: absolute;
     bottom: -10px;
     border-radius: 0px 10px 10px 0px;
-}
-
-#relatedProduct2 {
-    background-image: url(../img/arroz-luccheti.jpg);
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    margin: auto;
-    position: relative;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
 }
 
 #relatedProduct2 p {
@@ -481,18 +505,6 @@ main {
     border-radius: 0px 10px 10px 0px;
 }
 
-#relatedProduct3 {
-    background-image: url(../img/capeletinis.jpg);
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    margin: auto;
-    position: relative;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
 #relatedProduct3 p {
     background-color: #A6C48A;
     padding: 10px;
@@ -503,6 +515,24 @@ main {
 }
 
 #relatedProduct3 h4 {
+    background: gray;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#relatedProduct4 p {
+    background-color: #A6C48A;
+    padding: 10px;
+    right: 0;
+    bottom: 30px;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#relatedProduct4 h4 {
     background: gray;
     color: #fff;
     padding: 10px;
@@ -617,7 +647,7 @@ main {
     text-align: left;
 }
 
-.errorText{
+.errorText {
     text-align: left;
     color: red;
 }
