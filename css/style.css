@@ -96,6 +96,9 @@ header {
     position: relative;
     left: 7px;
 }
+.displayNone{
+    display: none;
+}
 
 .justifyLeft #usuario {
     position: relative;
