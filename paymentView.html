@@ -26,9 +26,9 @@
         </select>
         <br/>
         <label for="tarjetas guardadas">Otra tarjeta</label>            
-        <input type="checkbox" id="new-card" value="Nueva-tarjeta" />
+        <input type="checkbox" id="new-card" value="Nueva-tarjeta" onchange="NuevosDatos()" />
         <br/>
-        <div class="justifyLeft">
+        <div class="justifyLeft displayNone" id="newCard">
           <div class="justifyLeft">
             <label for="numeroTar">Número tarjeta</label>
               <input type="text" name="numeroTar" id="numeroTar" maxlength="16" size="15" placeholder="Número de tarjeta" required/>              <br/>
