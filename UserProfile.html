@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icono-hoja.svg">
+    <link rel="stylesheet" href="./css/tingle.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Perfil</title>
 </head>
+
 <body>
     <header>
         <nav class="navLogo">
@@ -45,20 +48,21 @@
     <main>
         <div class="inlineUser">
             <div>
-                <img src="img/icono-de-perfil-de-usuario.jpg"  height="100px" />
+                <img src="img/icono-de-perfil-de-usuario.jpg" height="100px" />
             </div>
             <div class="nameUser">
                 <h2>Nombre, Apellido</h3>
             </div>
             <br>
         </div>
-        <form action="myAdress.html">
-        <div class="inline2 justifyToTheLeft">
-            <h3>Mis direcciones</h3>
-            <div class="buttonAdd">
-                <button value="Agregar">Agregar</button>
+        <form action="#" id="agregarDireccion">
+            <div class="inline2 justifyToTheLeft">
+                <h3>Mis direcciones</h3>
+                <div class="buttonAdd">
+                    <button value="Agregar" id="agregarDireccion">Agregar</button>
+                </div>
             </div>
-        </div>
+        </form>
         <section class="inline2">
             <table class="table2">
                 <tr>
@@ -76,19 +80,19 @@
                     <td><img src="img/icono-basura.png" alt="basura"></td>
                 </tr>
             </table>
-        </form>
+
         </section>
         <br>
-        <form action="paymentMethod.html">
+        <form action="#">
             <div class="inline2 justifyToTheLeft">
                 <h3>Mis Tarjetas</h3>
                 <div class="buttonAdd">
-                    <button value="Agregar">Agregar</button>
+                    <button value="Agregar" id="agregarTarjeta">Agregar</button>
                 </div>
             </div>
         </form>
-        <section>    
-            <table  class="table2">
+        <section>
+            <table class="table2">
                 <tr>
                     <th>Alias</th>
                 </tr>
@@ -100,10 +104,10 @@
                     <td>Tarjeta Debito</td>
                     <td><img src="img/icono-basura.png" alt="basura"></td>
                 </tr>
-                </table>
-           </section>
+            </table>
+        </section>
     </main>
-    
+
     <footer class="footerStyle">
         <div class="container">
             <div class="footerCol">
@@ -138,5 +142,14 @@
         </div>
     </footer>
 </body>
-<script src="js/userProfile.js"></script>
+<script src="./js/tingle.js"></script>
+<script src="./js/userProfile.js"></script>
+<script>
+    var modal = new tingle.modal({
+        closeMethods: ['overlay', 'button', 'escape'],
+        closeLabel: "Close",
+    });  
+</script>
+
+
 </html>
