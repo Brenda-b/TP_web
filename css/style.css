@@ -173,7 +173,7 @@ footer h3 {
 }
 
 .submit {
-    display: inline-flex;
+    display: inline-flex; 
 }
 
 .submit:hover {
@@ -291,6 +291,10 @@ footer h3 {
     background-repeat: no-repeat;
     background-position: center;
 
+}
+.cart{
+    display: flex;
+    transition: all 0.5s;
 }
 
 .cart img {
@@ -650,4 +654,16 @@ main {
 .errorText {
     text-align: left;
     color: red;
+}
+.cantidad{
+    position: absolute;
+    color: white;
+    z-index: 999;
+    background-color: red;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    top: 1.5em;
+    right: 0.5em;
+    text-align: center;
 }

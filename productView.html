@@ -24,9 +24,12 @@
                     <button></button>
                 </form>
             </div>
-            <div class="cart">
-                <a href="cartView.html"><img src="img/icono-carrito.png" alt="carrito"></a>
-            </div>
+            <section class="cart">
+                <a href="cartView.html"><img src="img/icono-carrito.png" alt="carrito">
+                    <div id="cantidad"></div>
+                </a>
+
+            </section>
         </nav>
         <nav>
             <div class="navlist">
@@ -76,8 +79,8 @@
                     <p>se deben cocinar un poco más, ya que tardan más en absorber el agua.</p>
                 </div>
                 <div class="buttonBuy">
-                    <form action="#">
-                        <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="99">
+                    <form action="#" method="get" id="form">
+                        <input type="number" name="cantidadProd" id="cantidadProd" value="1" min="1" max="99">
                         <button>Agregar</button>
                     </form>
                 </div>
