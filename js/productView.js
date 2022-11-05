@@ -27,54 +27,63 @@ let productos = [
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 300
     }
-] 
-const titulo = document.querySelector ("h2");
-const descripcion = document.querySelector ("#descripcion");
-const precio = document.querySelector ("#precio");
-const foto = document.querySelector ("#productID");
+]
+const form = document.querySelector("#form");
+const titulo = document.querySelector("h2");
+const descripcion = document.querySelector("#descripcion");
+const precio = document.querySelector("#precio");
+const foto = document.querySelector("#productID");
 
-const aceite = document.querySelector ("#aceite_cocinero");
-const arroz = document.querySelector ("#arroz_luchetti");
-const capeletinis = document.querySelector ("#capelettinis_giacomo");
+const aceite = document.querySelector("#aceite_cocinero");
+const arroz = document.querySelector("#arroz_luchetti");
+const capeletinis = document.querySelector("#capelettinis_giacomo");
 
-aceite.addEventListener ("click", (item)=>{
+aceite.addEventListener("click", (item) => {
     item.preventDefault;
     titulo.innerHTML = "";
     precio.innerHTML = "";
-    let elemento = productos.filter (productos => productos.nombre == "Aceite Cocinero");
-    
+    let elemento = productos.filter(productos => productos.nombre == "Aceite Cocinero");
+
     elemento.forEach(item => {
         titulo.innerHTML = item.nombre;
         precio.innerHTML = "$" + item.precio;
         foto.style.backgroundImage = item.foto;
     });
-    })
-
-arroz.addEventListener ("click", (item)=>{
-    item.preventDefault;
-    titulo.innerHTML = "";
-    precio.innerHTML = "";
-    let elemento = productos.filter (productos => productos.nombre == "Arroz Luchetti");
-    
-    elemento.forEach(item => {
-        titulo.innerHTML = item.nombre;
-        precio.innerHTML = "$" + item.precio;
-        foto.style.backgroundImage = item.foto;
-    });
-    
 })
 
-capeletinis.addEventListener ("click", (item)=>{
+arroz.addEventListener("click", (item) => {
     item.preventDefault;
     titulo.innerHTML = "";
     precio.innerHTML = "";
-    let elemento = productos.filter (productos => productos.nombre == "Capelettinis Giacomo");
-    
+    let elemento = productos.filter(productos => productos.nombre == "Arroz Luchetti");
+
     elemento.forEach(item => {
         titulo.innerHTML = item.nombre;
         precio.innerHTML = "$" + item.precio;
         foto.style.backgroundImage = item.foto;
     });
-    
+
 })
+
+capeletinis.addEventListener("click", (item) => {
+    item.preventDefault;
+    titulo.innerHTML = "";
+    precio.innerHTML = "";
+    let elemento = productos.filter(productos => productos.nombre == "Capelettinis Giacomo");
+
+    elemento.forEach(item => {
+        titulo.innerHTML = item.nombre;
+        precio.innerHTML = "$" + item.precio;
+        foto.style.backgroundImage = item.foto;
+    });
+
+})
+
+form.addEventListener("submit", (item) => {
+    item.preventDefault();
+    const circulo = document.querySelector("#cantidad")
+    const cantProd = document.querySelector("#cantidadProd")
+    circulo.classList.add('cantidad');
+    circulo.innerHTML = cantProd.value;
+});
 
