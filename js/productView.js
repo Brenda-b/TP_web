@@ -1,23 +1,27 @@
 let productos = [
     {
+        id: 1,
         nombre: "Paquete de fideos Matarazzo",
         foto: `url(img/paquete-de-fideos.jpg)`,
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 100
     },
     {
+        id: 2,
         nombre: "Aceite Cocinero",
         foto: `url(img/aceite-cocinero.webp)`,
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 150
     },
     {
+        id: 3,
         nombre: "Arroz Luchetti",
         foto: `url(img/arroz-luccheti.jpg)`,
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 75
     },
     {
+        id: 4,
         nombre: "Capelettinis Giacomo",
         foto: `url(img/capeletinis.jpg)`,
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
