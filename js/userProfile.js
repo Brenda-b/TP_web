@@ -383,11 +383,11 @@ function validarDireccion() {
         error = true;
         errorMessaje += "<p>El formato del teléfono no es correcto</p>";
     }
-    if (!regexNumero.test(piso)) {
+    if (!regexNumero.test(piso) && !piso == "") {
         error = true;
         errorMessaje += "<p>El formato del piso no es correcto</p>";
     }
-    if (!regexNumero.test(depto)) {
+    if (!regexNumero.test(depto) && !depto == "") {
         error = true;
         errorMessaje += "<p>El formato del departamento no es correcto</p>";
     }
