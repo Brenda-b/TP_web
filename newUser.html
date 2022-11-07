@@ -15,8 +15,7 @@
         <div class="justifyCenter">
             <img src="img/logo.png" alt="Logo COTI">
         </div>
-        </div>
-        <form action="#" method="post">
+        <form action="#">
             <div class="justify">
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" maxlength="20" size="22" placeholder="Ingrese usuario"><br>
@@ -31,16 +30,20 @@
                 <label for="repeatPassword">Repetir contraseña</label>
                 <input type="text" name="repeatPassword" id="repeatPassword" maxlength="20" size="22"
                     placeholder="Ingrese contraseña"><br>
-            </div>
-        </form>
-        <form action="index.html">
-            <div class="inline2">
-                <div class="buttonAdd">
-                    <button value="Cancelar">Cancelar</button>
+                <div class="inline2">
+                    <div class="button">
+                        <input type="reset" value="Cancelar">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Guardar">
+                    </div>
                 </div>
-                <div class="buttonAdd">
-                    <button value="Guardar">Guardar</button>
-                </div>
+                <span id="mensaje7" class="errorText"></span>
+                <span id="mensaje8" class="errorText"></span>
+                <span id="mensaje9" class="errorText"></span>
+                <span id="mensaje10" class="errorText"></span>
+                <span id="mensaje11" class="errorText"></span>
+                <span id="mensaje12" class="errorText"></span>
             </div>
         </form>
     </section>
