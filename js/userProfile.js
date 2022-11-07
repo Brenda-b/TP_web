@@ -6,6 +6,30 @@ let regexAlias = /^[a-zA-Z._.-]{5,10}$/;
 let regexCod = /^\d{3}$/;
 let regexVenc = /^\d{2}[- /.]\d{2}$/;
 let regexTitular = /^[a-zA-Z._.-]{5,15}$/;
+let buenosAires = ["Avellaneda", "Bahía Blanca", "Campana", "Chascomús", "Florencio Varela", "Lanús", "La Matanza", "Morón"]
+let caba = ["Comuna 1", "Comuna 2", "Comuna 3", "Comuna 4", "Comuna 5"];
+let catamarca = ["Aconquija","Ancasti","Andagalá"];
+let chaco = ["Avia Terai","Campo Largo","Charata"];
+let chubut = ["Biedma","Gaiman","Rawson"];
+let cordoba = ["Arroyito","Cosquín","Mina Clavero"];
+let corrientes = ["Bella Vista","Chavarría","Colonia Libertad"];
+let entreRios = ["Colón","Paraná","Concordia"];
+let formosa = ["El Colorado","Herradura","Las Lomitas"];
+let jujuy = ["Abra Pampa","El Aguilar","Humahuaca"];
+let laPampa = ["Abramo","General Pico","Santa Rosa"];
+let laRioja = ["Alpasinche","Los Robles","Villa Casana"];
+let mendoza = ["Agua Escondida","Cacheuta","Junín"];
+let misiones = ["Caá Yarí","Garuhapé","Pindapoy"];
+let neuquen = ["Aluminé","Junín de los Andes","Loncopué"];
+let rioNegro = ["Bariloche","El Bolsón","Los Menucos"];
+let salta = ["Chicoana","El Tipal","Las Lajitas"];
+let sanJuan = ["Albardón","San Martín","Santa Lucía"];
+let sanLuis = ["El Cadillo","Los Cerrillos","Saladillo"];
+let santaCruz = ["Las Heras","Perito Moreno","Río Gallegos"];
+let santafe = ["Acebal","Berabevú","Cayastá"];
+let santiago = ["Añatuya","Bandera","Villa La Punta"];
+let tierraDelFuego = ["Antártida Argentina","Río Grande","Ushuaia"];
+let tucuman = ["Aguilares","Bella Vista","Concepción"];
 
 direccion.addEventListener("click", (e) => {
     modal.setContent(`<section>
@@ -50,13 +74,8 @@ direccion.addEventListener("click", (e) => {
                 </select> <br>
 
                 <label for="localidades">Localidad</label>
-                <select name="localidades" id="localidades" class="select">
+                <select name="localidades" id="localidades" class="select" required>
                     <option value="">--Seleccionar--</option>
-                    <option value="1">Castelar</option>
-                    <option value="2">El Palomar</option>
-                    <option value="3">Haedo</option>
-                    <option value="4">Morón</option>
-                    <option value="5">Villa Sarmiento</option>
                 </select> <br>
 
                 <label for="direccion">Dirección</label>
@@ -80,6 +99,228 @@ direccion.addEventListener("click", (e) => {
         </form>
     </section>`)
     modal.open();
+    const provincias = document.querySelector("#provincias");
+    const localidades = document.querySelector("#localidades");
+    provincias.addEventListener("change", () => {
+        localidades.innerHTML = `<option value="">--Seleccionar--</option>`;
+        if (provincias.value == 1) {
+            buenosAires.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 2) {
+            caba.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 3) {
+            catamarca.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 4) {
+            chaco.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 5) {
+            chubut.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 6) {
+            cordoba.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 7) {
+            corrientes.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 8) {
+            entreRios.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 9) {
+            formosa.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 10) {
+            jujuy.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 11) {
+            laPampa.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 12) {
+            laRioja.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 13) {
+            mendoza.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 14) {
+            misiones.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 15) {
+            neuquen.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 16) {
+            rioNegro.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 17) {
+            salta.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 18) {
+            sanJuan.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 19) {
+            sanLuis.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 20) {
+            santaCruz.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 21) {
+            santaFe.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 22) {
+            santiago.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 23) {
+            tierraDelFuego.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+        else if (provincias.value == 24) {
+            tucuman.forEach((item) => {
+                let option = document.createElement("option");
+                option.value = item;
+                let texto = document.createTextNode(item);
+                option.appendChild(texto);
+                localidades.appendChild(option);
+            });
+        }
+    
+    })
     let form = document.getElementById("form");
     form.addEventListener("submit", (e) => {
         e.preventDefault();
