@@ -26,7 +26,7 @@ let salta = ["Chicoana","El Tipal","Las Lajitas"];
 let sanJuan = ["Albardón","San Martín","Santa Lucía"];
 let sanLuis = ["El Cadillo","Los Cerrillos","Saladillo"];
 let santaCruz = ["Las Heras","Perito Moreno","Río Gallegos"];
-let santafe = ["Acebal","Berabevú","Cayastá"];
+let santaFe = ["Acebal","Berabevú","Cayastá"];
 let santiago = ["Añatuya","Bandera","Villa La Punta"];
 let tierraDelFuego = ["Antártida Argentina","Río Grande","Ushuaia"];
 let tucuman = ["Aguilares","Bella Vista","Concepción"];
@@ -339,7 +339,7 @@ tarjeta.addEventListener("click", (e) => {
     <form action="#" method="post" id="form">
         <div class="justify">
             <label for="alias">Alias</label>
-            <input type="text" name="alias" id="alias" maxlength="20" size="23" placeholder="Alias"><br>
+            <input type="text" name="alias" id="alias" maxlength="20" size="23" placeholder="Alias" required><br>
             <label for="numeroTar">Número tarjeta</label>
             <input type="text" name="numeroTar" id="numeroTar" maxlength="10" size="23"
                 placeholder="Número de tarjeta" required><br>

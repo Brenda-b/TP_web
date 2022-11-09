@@ -14,18 +14,16 @@ h1 {
 body {
     margin: 0;
     padding: 0;
-    margin-top: 14%;
     background-image: url(../img/fondo.png);
     background-repeat: repeat-x;
     background-color: #fff
 }
 
 header {
-    position: fixed;
+    position:sticky;
     width: 100%;
     z-index: 1;
     top: 0;
-    left: 0;
 }
 
 .border {
@@ -67,42 +65,8 @@ header {
     text-align: left;
 }
 
-#user1 {
-    position: relative;
-    left: 130px;
-}
-
-#password1 {
-    position: relative;
-    left: 100px;
-}
-
-#password2 {
-    position: relative;
-    left: 0;
-}
-
-#password2 input {
-    position: relative;
-    left: 100px;
-}
-
-#email1 {
-    position: relative;
-    left: 27px;
-}
-
-#name1 {
-    position: relative;
-    left: 7px;
-}
 .displayNone{
     display: none;
-}
-
-.justifyLeft #usuario {
-    position: relative;
-    left: 100px;
 }
 
 .justifyCenter {
@@ -199,24 +163,24 @@ footer h3 {
     color: #fff;
 }
 
-#contactSubmit {
-    text-align: right;
-}
-
-#contactSubmit input {
-    width: 100px;
-    height: 25px;
-    transition: all 0.5s;
-}
-
-#contactSubmit input:hover {
-    background-color: #A6C48A;
-    color: #fff;
-}
-
-#map {
-    text-align: center;
+.name1{
     position: relative;
+    left: 0.6em;
+}
+.email1{
+    position: relative;
+    left: 2em;
+    
+}
+
+.map{
+    margin:auto;
+    max-width: 70em;
+    width: 75%;
+}
+.map iframe{
+    width: 100%;
+    height: 13em;
 }
 
 .socialNetworks {
