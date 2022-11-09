@@ -21,11 +21,11 @@ function validar() {
     const codigo = document.querySelector("#codigoCvv").value;
     const vencimiento = document.querySelector("#vencimiento").value;
     const titular = document.querySelector("#titular").value;
-    let errorMessageTar = ""
-    let errorMessageAlias = ""
-    let errorMessageCod = ""
-    let errorMessageVenc = ""
-    let errorMessageTitular = ""
+    let errorMessageTar = "";
+    let errorMessageAlias = "";
+    let errorMessageCod = "";
+    let errorMessageVenc = "";
+    let errorMessageTitular = "";
     let suma = 0;
 
     //Validacion alias
