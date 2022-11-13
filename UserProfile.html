@@ -19,7 +19,7 @@
             </div>
             <div class="search">
                 <form action="#">
-                    <input type="text" name="buscar" id="buscar" placeholder="Buscar..." size="100" required>
+                    <input type="text" name="buscar" id="buscar" placeholder="Buscar..." required>
                     <button></button>
                 </form>
             </div>
@@ -40,7 +40,7 @@
                 </form>
                 <form action="UserProfile.html">
                     <button>Mi cuenta</button>
-                </form>
+                </form> 
             </div>
         </nav><br><br><br>
     </header>
@@ -64,21 +64,10 @@
         <section class="inline2">
             <table class="table2">
                 <tr>
-                    <th>Alias</th>
-                    <th>Direccion</th>
-                </tr>
-                <tr>
-                    <td>mi casa</td>
-                    <td>xxxxx 6565</td>
-                    <td><img src="img/icono-basura.png" alt="basura"></td>
-                </tr>
-                <tr>
-                    <td>Casa abuela</td>
-                    <td>xxxxxxxx 9887</td>
-                    <td><img src="img/icono-basura.png" alt="basura"></td>
+                    <th id="tituloAlias">Alias</th>
+                    <th id="tituloDireccion">Direccion</th>
                 </tr>
             </table>
-
         </section>
         <br>
         <div class="inline2 justifyToTheLeft">
@@ -144,6 +133,14 @@
     var modal = new tingle.modal({
         closeMethods: ['overlay', 'button', 'escape'],
         closeLabel: "Close",
-    });  
+    }); 
+    var modal2 = new tingle.modal({
+        closeMethods: [''],
+        closeLabel: "Close",
+    }); 
+    var modal3 = new tingle.modal({
+        closeMethods: [''],
+        closeLabel: "Close",
+    }); 
 </script>
 </html>

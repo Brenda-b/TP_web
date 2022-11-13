@@ -101,6 +101,14 @@ textarea {
     margin: 7px;
 }
 
+.selectLittle{
+    width: 11%;
+    border-radius: 3px;
+    border-width: 1.8px;
+    padding: 3px;
+    margin: 7px;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -156,6 +164,11 @@ footer h3 {
     width: 10em;
     height: 2em;
     transition: all 0.5s;
+}
+
+.submit2:hover {
+    background-color: #A6C48A;
+    color: #fff;
 }
 
 .submit button:hover {
@@ -223,9 +236,11 @@ footer h3 {
 
 .search {
     position: relative;
+    width: 60%;
 }
 
 .search input {
+    width: 100%;
     height: 33px;
     font-size: 17px;
     border: solid;
@@ -323,18 +338,6 @@ main {
     color: #fff;
 }
 
-#productID {
-    background-image: url(../img/paquete-de-fideos.jpg);
-    width: 300px;
-    height: 300px;
-    background-size: cover;
-    margin: auto;
-    position: relative;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-right: 30px;
-}
 .productID {
     background-image: url(../img/paquete-de-fideos.jpg);
     width: 300px;
@@ -593,6 +596,7 @@ main {
 .table2 td {
     text-align: center;
     border: 3px solid #A6C48A;
+    height: 40px;
 }
 
 .table2 :last-child {
