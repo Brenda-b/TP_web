@@ -149,6 +149,7 @@ window.addEventListener("load", (e) => {
         const nombre = JSON.parse(sessionStorage.getItem("actualUser"))
         titulo.innerHTML = nombre.nombre + " " + nombre.apellido;
         imprimirDirecciones();
+        imprimirTarjetas();
     }
 })
 //Funcion que habilita el submit si los campos "usuario" y "contraseña" tienen minimo 5 caracteres
@@ -226,6 +227,13 @@ function getDireccionID() {
     let newDireccionID = JSON.parse(lastDireccionID) + 1;
     sessionStorage.setItem("lastDireccionID", JSON.stringify(newDireccionID));
     return newDireccionID;
+}
+
+function TarjetasID(){
+    let lastTarjetaID = sessionStorage.getItem("lastTarjetaID") || "-1";
+    let newTarjetaID = JSON.parse(lastTarjetaID) + 1;
+    sessionStorage.setItem("lastTarjetaID", JSON.stringify(newTarjetaID));
+    return newTarjetaID;
 }
 //Si se clickea en "agregar direccion" se abre el popUp "myAdress"
 direccion.addEventListener("click", (e) => {
@@ -625,8 +633,8 @@ function submitDireccion() {
 
 //Funcion que se encarga de imprimir todas las direcciones al cargar la página
 function imprimirDirecciones() {
-    const allDirecciones = JSON.parse(sessionStorage.getItem("direcciones")) || ""
-    if (allDirecciones != null) {
+    const allDirecciones = JSON.parse(sessionStorage.getItem("direcciones")) || "0"
+    if (allDirecciones != 0) {
         console.log(allDirecciones)
         allDirecciones.forEach((item) => {
             crearFilaDirecciones(item.direccionID, item.alias, item.direccion);
@@ -635,7 +643,7 @@ function imprimirDirecciones() {
 }
 //Funcion que se encarga de crear las filas de las direcciones
 function crearFilaDirecciones(idDireccion, alias, direccion) {
-    const tabla = document.querySelector(".table2")
+    const tabla = document.querySelector("#table2")
     let row1 = document.createElement("tr");
     row1.setAttribute("idFila", idDireccion);
     let column1 = document.createElement("td");
@@ -729,15 +737,69 @@ function validarTarjeta() {
 }
 
 function submitTarjeta() {
+    const allTarjetas = JSON.parse(sessionStorage.getItem("tarjetas"))
     let metodoDePago = {
+        tarjetaID: TarjetasID(),
         alias: document.getElementById("alias").value,
         numero: document.getElementById("numeroTar").value,
         codigo: document.getElementById("codigoCvv").value,
         vencimiento: document.getElementById("vencimiento").value,
         titular: document.getElementById("titular").value,
     }
-    console.log(metodoDePago)
-    sessionStorage.setItem("NewCard", JSON.stringify(metodoDePago));
+    if (allTarjetas !=  null){
+        crearFilaTarjeta(metodoDePago.tarjetaID, metodoDePago.alias);
+        allTarjetas.push(metodoDePago);
+        sessionStorage.setItem("tarjetas", JSON.stringify(allTarjetas));
+    }
+    else{
+        crearFilaTarjeta(metodoDePago.tarjetaID, metodoDePago.alias);
+        tarjetas.push(metodoDePago);
+        sessionStorage.setItem("tarjetas", JSON.stringify(tarjetas));
+    }
+}
+
+function crearFilaTarjeta(idTarjeta, alias) {
+    const tabla = document.querySelector("#table3")
+    let row1 = document.createElement("tr");
+    row1.setAttribute("idFila", idTarjeta);
+    let column1 = document.createElement("td");
+    let column2 = document.createElement("td");
+    let texto1 = document.createTextNode(alias);
+    let botonBorrar = document.createElement("a");
+    let trashCan = document.createElement("img");
+    trashCan.src = "img/icono-basura.png";
+    tabla.appendChild(row1);
+    row1.appendChild(column1);
+    row1.appendChild(column2);
+    column1.appendChild(texto1);
+    column2.appendChild(botonBorrar);
+    botonBorrar.appendChild(trashCan);
+    //Al presionar en el icono de "basura" se elimina la columna seleccionada
+    botonBorrar.addEventListener("click", (e) => {
+        let filaAEliminar = e.target.parentNode.parentNode.parentNode;
+        console.log(filaAEliminar);
+        let direccionID = row1.getAttribute("idFila");
+        console.log(direccionID);
+        filaAEliminar.remove();
+        eliminarDeSessionStorageTarjetas(direccionID);
+    })
+}
+
+function eliminarDeSessionStorageTarjetas(direccionID) {
+    let allTarjetas = JSON.parse(sessionStorage.getItem("tarjetas"));
+    let indexTarjeta = allTarjetas.findIndex(element => element.direccionID === direccionID);
+    allTarjetas.splice(indexTarjeta, 1);
+    sessionStorage.setItem("tarjetas", JSON.stringify(allTarjetas));
+}
+
+function imprimirTarjetas() {
+    const allTarjetas = JSON.parse(sessionStorage.getItem("tarjetas")) || "0"
+    if (allTarjetas != 0) {
+        console.log(allTarjetas)
+        allTarjetas.forEach((item) => {
+            crearFilaTarjeta(item.tarjetaID, item.alias);
+        })
+    }
 }
 
 function validarNuevoUsuario() {
