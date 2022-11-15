@@ -1,3 +1,6 @@
+/*NOTA: Para entrar en la página es necesario registrarse y al momento de entrar en la pagina, en el campo usuario poner tu nombre
+Osino poner "prueba" en los campo usuasrio y contraseña para entrar con un usuario genérico*/ 
+
 const direccion = document.querySelector("#agregarDireccion")
 const tarjeta = document.querySelector("#agregarTarjeta")
 let regexNumero = /^[0-9]+$/;
