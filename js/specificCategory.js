@@ -67,3 +67,5 @@ const agregarAlCarrito= (prodId) => {
     const item= producto.find((prod) => prod.id === prodId)
     carrito.push(item)
 };
+
+//Para agregar un cambio
