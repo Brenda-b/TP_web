@@ -1,4 +1,4 @@
-let productos = [
+/*let productos = [
     {
         id: 1,
         nombre: "Paquete de fideos Matarazzo",
@@ -27,7 +27,7 @@ let productos = [
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 300
     }
-]
+]*/
 const form = document.querySelector("#form");
 const titulo = document.querySelector("h2");
 const descripcion = document.querySelector("#descripcion");
