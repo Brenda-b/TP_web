@@ -172,13 +172,38 @@
 <script src="js/productView.js"></script>
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
-<script>$(document).ready(function () {
-        $('.slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: true,
-            autoplay: true,
-        });
-    });</script>
+<script>$('.slider').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+      </script>
 
 </html>

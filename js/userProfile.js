@@ -79,12 +79,13 @@ window.addEventListener("load", (e) => {
         <form action="#" method="get" autocomplete="off">
             <div>
                 <label for="user1">Usuario</label>
-                <input type="text" name="user1" id="user1" placeholder="Ingrese usuario" required><br>
+                <input type="text" name="user1" id="user1" placeholder="Ingrese usuario" required class="name2 select"><br>
             </div>
             <div id="password2">
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Ingrese contraseña" required>
+                <input type="password" name="password" id="password" placeholder="Ingrese contraseña" required class="select">
             </div>
+    </div>
     </div>
     <div class="justifyCenter">
         <p><a href="#">¿Olvidaste la contraseña?</a></p>
@@ -623,11 +624,15 @@ function submitDireccion() {
         departamento: document.getElementById("departamento").value
     }
     if (allDirecciones != null) {
+        document.querySelector("#tituloAlias").innerHTML = "Alias"
+        document.querySelector("#tituloDireccion").innerHTML = "Dirección"
         crearFilaDirecciones(adress.direccionID, adress.alias, adress.direccion);
         allDirecciones.push(adress);
         sessionStorage.setItem("direcciones", JSON.stringify(allDirecciones));
     }
     else {
+        document.querySelector("#tituloAlias").innerHTML = "Alias"
+        document.querySelector("#tituloDireccion").innerHTML = "Dirección"
         crearFilaDirecciones(adress.direccionID, adress.alias, adress.direccion);
         direcciones.push(adress);
         sessionStorage.setItem("direcciones", JSON.stringify(direcciones));
@@ -642,6 +647,10 @@ function imprimirDirecciones() {
         allDirecciones.forEach((item) => {
             crearFilaDirecciones(item.direccionID, item.alias, item.direccion);
         })
+    }
+    else{
+        document.querySelector("#tituloAlias").innerHTML = "No hay Alias subidos"
+        document.querySelector("#tituloDireccion").innerHTML = "No hay direcciones subidas"
     }
 }
 //Funcion que se encarga de crear las filas de las direcciones
@@ -750,11 +759,13 @@ function submitTarjeta() {
         titular: document.getElementById("titular").value,
     }
     if (allTarjetas !=  null){
+        document.querySelector("#aliasTarjetas").innerHTML = "Alias"
         crearFilaTarjeta(metodoDePago.tarjetaID, metodoDePago.alias);
         allTarjetas.push(metodoDePago);
         sessionStorage.setItem("tarjetas", JSON.stringify(allTarjetas));
     }
     else{
+        document.querySelector("#aliasTarjetas").innerHTML = "Alias"
         crearFilaTarjeta(metodoDePago.tarjetaID, metodoDePago.alias);
         tarjetas.push(metodoDePago);
         sessionStorage.setItem("tarjetas", JSON.stringify(tarjetas));
@@ -780,9 +791,7 @@ function crearFilaTarjeta(idTarjeta, alias) {
     //Al presionar en el icono de "basura" se elimina la columna seleccionada
     botonBorrar.addEventListener("click", (e) => {
         let filaAEliminar = e.target.parentNode.parentNode.parentNode;
-        console.log(filaAEliminar);
         let direccionID = row1.getAttribute("idFila");
-        console.log(direccionID);
         filaAEliminar.remove();
         eliminarDeSessionStorageTarjetas(direccionID);
     })
@@ -802,6 +811,9 @@ function imprimirTarjetas() {
         allTarjetas.forEach((item) => {
             crearFilaTarjeta(item.tarjetaID, item.alias);
         })
+    }
+    else{
+        document.querySelector("#aliasTarjetas").innerHTML = "No hay tarjetas subidas"
     }
 }
 
