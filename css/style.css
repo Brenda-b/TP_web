@@ -332,6 +332,19 @@ main {
     background-size: 23px 23px;
     transition: all 0.5s;
 }
+.agregarButton{
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 80px;
+    height: 28px;
+    background-image: url(../img/carrito-agregar.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 23px 23px;
+    transition: all 0.5s;
+}
 
 .buttonBuy button:hover {
     background-color: #A6C48A;
@@ -359,14 +372,14 @@ main {
     border-radius: 10px 0px 0px 10px;
 }
 
-#productID p {
+/*#productID p {
     background-color: #A6C48A;
     padding: 10px;
     right: 0;
     bottom: 30px;
     position: absolute;
     border-radius: 10px 0px 0px 10px;
-}
+}*/
 
 .paymentMethod1 {
     background-image: url(../img/americanExpress.png);
@@ -479,6 +492,24 @@ main {
     position: absolute;
     bottom: -10px;
     border-radius: 0px 10px 10px 0px;
+}
+
+.productName{
+    background: gray;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 0px 10px 10px 0px
+}
+
+.price{
+    background-color: #A6C48A;
+    padding: 10px;
+    right: 0;
+    bottom: 30px;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .relatedProduct2 p {
