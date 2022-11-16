@@ -6,7 +6,7 @@ const tarjeta = document.querySelector("#agregarTarjeta")
 let regexNumero = /^[0-9]+$/;
 let regexTarjeta = /^\d{10}$/;
 let regexAlias = /^[a-zA-Z._.-]{5,10}$/;
-let regexContra = /^(?=.{8,})[A-Z][a-zA-Z]+[0-9]{1,}$/;
+let regexContra = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
 let regexCod = /^\d{3}$/;
 let regexVenc = /^\d{2}[- /.]\d{2}$/;
 let regexTitular = /^[a-zA-Z._.-]{5,15}$/;
@@ -200,7 +200,6 @@ function submitUsuario() {
     //se busca el usuario en el array "usuarios"
     let userFound = allUsuarios.find(e => e.usuario === user.value) || "0";
     let passwordFound = allUsuarios.find(e => e.contraseña === password.value) || "0";
-    console.log(userFound, passwordFound)
     //Si se cumple esta condicion, se setean el nombre del usuario en la página y en el sessionStorage
     if (user.value == userFound.usuario && password.value == passwordFound.contraseña) {
         alert("Se ha logueado con exito");
@@ -643,7 +642,6 @@ function submitDireccion() {
 function imprimirDirecciones() {
     const allDirecciones = JSON.parse(sessionStorage.getItem("direcciones")) || "0"
     if (allDirecciones != 0) {
-        console.log(allDirecciones)
         allDirecciones.forEach((item) => {
             crearFilaDirecciones(item.direccionID, item.alias, item.direccion);
         })
@@ -807,7 +805,6 @@ function eliminarDeSessionStorageTarjetas(direccionID) {
 function imprimirTarjetas() {
     const allTarjetas = JSON.parse(sessionStorage.getItem("tarjetas")) || "0"
     if (allTarjetas != 0) {
-        console.log(allTarjetas)
         allTarjetas.forEach((item) => {
             crearFilaTarjeta(item.tarjetaID, item.alias);
         })
@@ -847,8 +844,6 @@ function validarNuevoUsuario() {
         errorMessage += "<p>No es una contraseña valida</p>";
     }
     if (contrasenia != contraseniaRepetida) {
-        console.log(contrasenia)
-        console.log(contraseniaRepetida)
         error = true;
         errorMessage += "<p>Las contraseñas no coniciden</p>";
     }
@@ -871,7 +866,6 @@ function submitNuevoUsuario() {
         direcciones: "",
         tarjetas: ""
     }
-    console.log(nuevoUsuario)
     const listaDeusuarios = JSON.parse(sessionStorage.getItem("usuarios"));
     if (listaDeusuarios != null) {
         listaDeusuarios.push(nuevoUsuario)
