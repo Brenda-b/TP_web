@@ -44,22 +44,20 @@
                 </form>
             </div>
         </nav>
-        <br>
-    </header>
+    </header><br><br>
 
     <main>
         <br>
         <section>
-           <section class="single-item">
-                    <article>
-                        <img src="img/banner1.jpg" width="100%" height="100%">
-                    </article>
-                    <article><img src="img/banner2.jpg" width="100%" height="100%"></article>
-                    <article><img src="img/banner3.webp"width="100%" height="100%"></article>
+            <section class="single-item banner">
+                <article class="carruselItem">
+                    <img src="img/banner1.jpg" width="100%" height="100%">
+                </article>
+                <article class="carruselItem"><img src="img/banner2.jpg" width="100%" height="100%"></article>
+                <article class="carruselItem"><img src="img/banner3.webp" width="100%" height="100%"></article>
             </section>
         </section>
-        
-        <br>
+
         <section>
             <div class="justifyCenter">
                 <h2>Categorias</h2>
@@ -162,7 +160,7 @@
                     <div class="paymentMethod4">
                     </div>
                 </a>
-                    <br>
+                <br>
             </div>
         </section>
     </main>
@@ -205,13 +203,47 @@
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript">
-   $('.single-item').slick();
+    $('.single-item').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
 </script>
 <script type="text/javascript">
     $('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 </script>
+
 </html>
