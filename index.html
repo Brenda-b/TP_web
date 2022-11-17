@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icono-hoja.svg">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <title>Coti</title>
 </head>
 
@@ -42,17 +44,21 @@
                 </form>
             </div>
         </nav>
+        <br>
     </header>
 
     <main>
-        <section class="inline2">
-            <article class="relatedProduct1">
-            </article>
-            <article class="relatedProduct2">
-            </article>
-            <article class="relatedProduct3">
-            </article>
+        <br>
+        <section>
+           <section class="single-item">
+                    <article>
+                        <img src="img/banner1.jpg" width="100%" height="100%">
+                    </article>
+                    <article><img src="img/banner2.jpg" width="100%" height="100%"></article>
+                    <article><img src="img/banner3.webp"width="100%" height="100%"></article>
+            </section>
         </section>
+        
         <br>
         <section>
             <div class="justifyCenter">
@@ -108,7 +114,7 @@
                         </form>
                     </div>
                 </article>
-                <article class"relatedProduct2">
+                <article class="relatedProduct2">
                     <p>$110</p>
                     <div>
                         <h4>Arroz Luchetti</h4>
@@ -120,7 +126,7 @@
                         </div>
                     </div>
                 </article>
-                <article class"relatedProduct3">
+                <article class="relatedProduct3">
                     <p>$110</p>
                     <div>
                         <h4>Capelettinis Giacomo</h4>
@@ -139,17 +145,25 @@
             <div class="justifyCenter">
                 <h2>Metodos de pago</h2>
             </div>
-            <section class="inline2">
-                <article class="paymentMethod1">
-                </article>
-                <article class="paymentMethod2">
-                </article>
-                <article class="paymentMethod3">
-                </article>
-                <article class="paymentMethod4">
-                </article>
-            </section>
-            <br>
+            <div class="multiple-items">
+                <a href="javascript:void(0);">
+                    <div class="paymentMethod1">
+                    </div>
+                </a>
+                <a href="javascript:void(0);">
+                    <div class="paymentMethod2">
+                    </div>
+                </a>
+                <a href="javascript:void(0);">
+                    <div class="paymentMethod3">
+                    </div>
+                </a>
+                <a href="javascript:void(0);">
+                    <div class="paymentMethod4">
+                    </div>
+                </a>
+                    <br>
+            </div>
         </section>
     </main>
 
@@ -187,5 +201,17 @@
         </div>
     </footer>
 </body>
-<script src="js/index.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript">
+   $('.single-item').slick();
+</script>
+<script type="text/javascript">
+    $('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+    });
+</script>
 </html>
