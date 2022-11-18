@@ -460,6 +460,33 @@ main {
     border-width: 1px;
     border-radius: 5px;
 }
+.popularProduct{
+    width: 18em;
+    height: 18em;
+    background-size: cover;
+    border-style: solid;
+    position: relative;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.popularProduct p{
+    background-color: #A6C48A;
+    padding: 10px;
+    right: 0;
+    bottom: 30px;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.popularProduct h4 {
+    background: gray;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 0px 10px 10px 0px;
+}
 
 .relatedProduct1 {
     background-image: url(../img/aceite-cocinero.webp);
