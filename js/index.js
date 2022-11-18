@@ -1,7 +1,7 @@
 
 const contenedorProductos = document.getElementById('contenedor-productos');
 
-let producto = [
+/*let productos = [
     {
         id: 1,
         nombre:'Paquete de fideos Matarazzo',
@@ -30,26 +30,13 @@ let producto = [
         descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quidem! Blanditiis non voluptates et illo cupiditate fuga eos, id minus voluptatem ut sed maxime impedit hic eum ex voluptas laboriosam? ',
         precio: 300
     },
-    {
-        id: 5,
-        nombre: 'Capelettinis Giacomo',
-        foto: 'img/capeletinis.jpg',
-        descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quidem! Blanditiis non voluptates et illo cupiditate fuga eos, id minus voluptatem ut sed maxime impedit hic eum ex voluptas laboriosam? ',
-        precio: 700
-    }
-];
+];*/
 
 let carrito= [];
 
-const agregarAlCarrito= (prodId) => {
-    //traigo el producto en el que el id coincida con el prodId que recibo por parametro
-    const item= producto.find((prod) => prod.id === prodId)
-    carrito.push(item);
 
 
-};
-
-producto.forEach((articulo) =>{
+productos.forEach((articulo) =>{
     const section= document.createElement('section');
     section.classList.add('articulo');
     section.innerHTML=` 
@@ -60,24 +47,25 @@ producto.forEach((articulo) =>{
         <p>$${articulo.precio}</p>
         <h4>${articulo.nombre}</h4>
         <div class="buttonBuy">
-            <form action="#">
-                <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="99">
+            <form action="#" id="form">
+                <input type="number" name="cantidadProd" id="cantidad" value="1" min="1" max="99">
                 <button id="agregar${articulo.id}">Agregar</button>
             </form>
         </div>
     </article>
+    <br><br>
     `
     
-
+    
     contenedorProductos.appendChild(section)
 
-    const boton=document.getElementById('agregar${articulo.id}') ;
-
+    const boton=document.getElementById(`agregar${articulo.id}`);
+    
     boton.addEventListener('click', () => {
-        agregarAlCarrito(producto.id);
+        agregarAlCarrito(articulo.id);
         console.log(carrito)
     });
 } );
 
 
-//Para agregar un cambio
+

@@ -1,4 +1,4 @@
-let productos = [
+/*let productos = [
     {
         id: 1,
         nombre: "Paquete de fideos Matarazzo",
@@ -23,7 +23,7 @@ let productos = [
     {
         id: 4,
         nombre: "Capelettinis Giacomo",
-        foto: `url(img/capeletinis.jpg)`,
+        foto: `img/capeletinis.jpg`,
         descripcion: "fawf awfawfawf awf aw faw fawf awf ",
         precio: 300
     }
@@ -37,8 +37,53 @@ const foto = document.querySelector("#productID");
 const aceite = document.querySelector("#aceite_cocinero");
 const arroz = document.querySelector("#arroz_luchetti");
 const capeletinis = document.querySelector("#capelettinis_giacomo");
+*/
+const vistaProducto= document.getElementById("descripcionProducto")
 
-aceite.addEventListener("click", (item) => {
+productos.forEach((articulo) =>{
+    const section= document.createElement('section');
+    section.classList.add('articulo');
+    section.innerHTML=` 
+    <article>
+        <div >
+            <div class="productID">
+            <img src="${articulo.foto}">
+            </div>
+            <p id="precio">$${articulo.precio}</p>
+        </div>
+    </article>
+    <article>
+        <h2>${articulo.nombre}</h2>
+        <div id="descripcion">
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+            <p>${articulo.descripcion}</p>
+        </div>
+        <div class="buttonBuy">
+            <form action="#" method="get" id="form">
+                <input type="number" name="cantidadProd" id="cantidadProd" value="1" min="1" max="99">
+                <button id="agregar${articulo.id}">Agregar</button>
+            </form>
+        </div>
+    </article>
+    `
+    
+    
+    contenedorProductos.appendChild(section)
+
+    const boton=document.getElementById(`agregar${articulo.id}`);
+    
+    boton.addEventListener('click', () => {
+        agregarAlCarrito(articulo.id);
+        console.log(carrito)
+    });
+} );
+
+/*aceite.addEventListener("click", (item) => {
     item.preventDefault;
     titulo.innerHTML = "";
     precio.innerHTML = "";
@@ -77,8 +122,8 @@ capeletinis.addEventListener("click", (item) => {
         foto.style.backgroundImage = item.foto;
     });
 
-})
-
+})*/
+//funcionalidad del carrito
 form.addEventListener("submit", (item) => {
     item.preventDefault();
     const circulo = document.querySelector("#cantidad")
