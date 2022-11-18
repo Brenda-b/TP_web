@@ -493,6 +493,7 @@ main {
     width: 18em;
     height: 18em;
     background-size: cover;
+    margin: auto;
     border-style: solid;
     position: relative;
     border-width: 1px;
@@ -775,6 +776,11 @@ main {
     text-align: center;
 }
 
+.carruselItem img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (min-width:30em) {
     .specificCategory {
         width: calc(50% - 1em);
@@ -782,6 +788,12 @@ main {
         border-style: solid;
         border-width: 1px;
         border-radius: 5px;
+    }
+    .carruselItem img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 25em;
+        height: 13em;
     }
 
     .specificCategory img {
@@ -822,6 +834,12 @@ main {
         border-width: 1px;
         border-radius: 5px;
     }
+    .carruselItem img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 40em;
+        height: 19em;
+    }
 
     .specificCategory img {
         width: 100%;
@@ -845,6 +863,12 @@ main {
         border-style: solid;
         border-width: 1px;
         border-radius: 5px;
+    }
+    .carruselItem img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50em;
+        height: 23em;
     }
 
     .specificCategory img {
