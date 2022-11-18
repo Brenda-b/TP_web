@@ -1,5 +1,4 @@
-
-const pagar= document.getElementById("botonPagar");
+const pagar= document.querySelector ("#botonPagar")
 
 pagar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -88,14 +87,7 @@ function NuevosDatos() {
 }
 
 //Para agregar un cambio
-const agregarAlCarrito= (prodId) => {
-  //traigo el producto en el que el id coincida con el prodId que recibo por parametro
-  const item= productos.find((prod) => prod.id === prodId)
-  carrito.push(item);
-  sessionStorage.setItem("item", JSON.stringify(item));
 
-
-};
 form.addEventListener("submit", (item) => {
   item.preventDefault();
   const circulo = document.querySelector("#cantidad")
