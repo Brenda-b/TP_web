@@ -137,4 +137,12 @@
         closeLabel: "Close",
     }); 
 </script>
+<script>
+    window.addEventListener("load", () =>{
+    let cantidad = JSON.parse(sessionStorage.getItem("carrito"))
+    const circulo = document.getElementById("cantidad");
+    circulo.classList.add('cantidad');
+    circulo.innerHTML = cantidad.length;
+})
+</script>
 </html>

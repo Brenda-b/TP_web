@@ -1,4 +1,4 @@
-/*let productos = [
+let productos = [
     {
         id: 1,
         nombre: "Paquete de fideos Matarazzo",
@@ -37,8 +37,8 @@ const foto = document.querySelector("#productID");
 const aceite = document.querySelector("#aceite_cocinero");
 const arroz = document.querySelector("#arroz_luchetti");
 const capeletinis = document.querySelector("#capelettinis_giacomo");
-*/
-const vistaProducto= document.getElementById("descripcionProducto")
+
+/*const vistaProducto= document.getElementById("descripcionProducto")
 
 productos.forEach((articulo) =>{
     const section= document.createElement('section');
@@ -81,10 +81,10 @@ productos.forEach((articulo) =>{
         agregarAlCarrito(articulo.id);
         console.log(carrito)
     });
-} );
+} );*/
 
-/*aceite.addEventListener("click", (item) => {
-    item.preventDefault;
+aceite.addEventListener("click", (item) => {
+    item.preventDefault();
     titulo.innerHTML = "";
     precio.innerHTML = "";
     let elemento = productos.filter(productos => productos.nombre == "Aceite Cocinero");
@@ -97,7 +97,7 @@ productos.forEach((articulo) =>{
 })
 
 arroz.addEventListener("click", (item) => {
-    item.preventDefault;
+    item.preventDefault();
     titulo.innerHTML = "";
     precio.innerHTML = "";
     let elemento = productos.filter(productos => productos.nombre == "Arroz Luchetti");
@@ -111,7 +111,7 @@ arroz.addEventListener("click", (item) => {
 })
 
 capeletinis.addEventListener("click", (item) => {
-    item.preventDefault;
+    item.preventDefault();
     titulo.innerHTML = "";
     precio.innerHTML = "";
     let elemento = productos.filter(productos => productos.nombre == "Capelettinis Giacomo");
@@ -122,7 +122,7 @@ capeletinis.addEventListener("click", (item) => {
         foto.style.backgroundImage = item.foto;
     });
 
-})*/
+})
 //funcionalidad del carrito
 form.addEventListener("submit", (item) => {
     item.preventDefault();

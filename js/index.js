@@ -47,7 +47,7 @@ productos.forEach((articulo) =>{
     section.innerHTML=` 
     <article class="popularProduct">
         <div >
-        <img src="${articulo.foto}" width= 100%>
+        <a href="productView.html"><img src="${articulo.foto}" width= 100%></a>
         </div>
         <p>$${articulo.precio}</p>
         <h4>${articulo.nombre}</h4>
@@ -67,7 +67,7 @@ productos.forEach((articulo) =>{
     const boton=document.getElementById(`agregar${articulo.id}`);
     
     boton.addEventListener('click', (e) => {
-        e.preventDefault;
+        e.preventDefault();
         agregarAlCarrito(articulo.id);
         sessionStorage.setItem("carrito", JSON.stringify(carrito));
         const circulo = document.getElementById("cantidad")
