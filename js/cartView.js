@@ -1,4 +1,4 @@
-const pagar= document.querySelector ("#botonPagar")
+const pagar = document.querySelector("#botonPagar")
 
 pagar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -54,7 +54,10 @@ pagar.addEventListener("click", (e) => {
   const form = document.querySelector("#submitPago");
   form.addEventListener("click", (e) => {
     e.preventDefault();
+    newCarrito = [];
+    sessionStorage.setItem("carrito", JSON.stringify(newCarrito));
     alert("Pago realizado");
+    location.reload();
     modal.close();
   })
   if (allTarjetas != "") {
@@ -77,7 +80,6 @@ pagar.addEventListener("click", (e) => {
   }
 })
 
-
 function NuevosDatos() {
   if (document.getElementById('new-card').checked == true) {
     document.getElementById('newCard').style.display = "block";
@@ -86,12 +88,59 @@ function NuevosDatos() {
   }
 }
 
-//Para agregar un cambio
-
-form.addEventListener("submit", (item) => {
-  item.preventDefault();
-  const circulo = document.querySelector("#cantidad")
-  const cantProd = document.querySelector("#cantidadProd")
-  circulo.classList.add('cantidad');
-  circulo.innerHTML = cantProd.value;
+window.addEventListener("load", () => {
+  imprimirCarrito();
 });
+
+function imprimirCarrito() {
+  const carrito = JSON.parse(sessionStorage.getItem("carrito")) || "";
+  console.log(carrito)
+  if (carrito != "") {
+    carrito.forEach((item) => {
+      crearFilaArticulo(item.nombre, item.cant, item.precio, item.id);
+    })
+  }
+}
+
+function crearFilaArticulo(nombre, cant, precio, id) {
+  const tabla = document.querySelector("#cart")
+  let row1 = document.createElement("tr");
+  row1.setAttribute("idFila", id);
+  let column1 = document.createElement("td");
+  let column2 = document.createElement("td");
+  let column3 = document.createElement("td")
+  let column4 = document.createElement("td")
+  let texto1 = document.createTextNode(nombre);
+  let texto2 = document.createTextNode(cant);
+  let texto3 = document.createTextNode(precio);
+  let botonBorrar = document.createElement("a");
+  let trashCan = document.createElement("img");
+  trashCan.src = "img/icono-basura.png";
+  tabla.appendChild(row1);
+  row1.appendChild(column1);
+  row1.appendChild(column2);
+  row1.appendChild(column3);
+  row1.appendChild(column4);
+  column1.appendChild(texto1);
+  column2.appendChild(texto2);
+  column3.appendChild(texto3);
+  column4.appendChild(botonBorrar);
+  botonBorrar.appendChild(trashCan);
+  //Al presionar en el icono de "basura" se elimina la columna seleccionada
+  botonBorrar.addEventListener("click", (e) => {
+    let filaAEliminar = e.target.parentNode.parentNode.parentNode;
+    let articuloID = row1.getAttribute("idFila");
+    filaAEliminar.remove();
+    eliminarDeSessionStorage(articuloID);
+  })
+
+  function eliminarDeSessionStorage(articuloID) {
+    let carrito = JSON.parse(sessionStorage.getItem("carrito"));
+    let indexCarrito = carrito.findIndex(element => element.id === articuloID);
+    carrito.splice(indexCarrito, 1);
+    sessionStorage.setItem("carrito", JSON.stringify(carrito));
+    const circulo = document.getElementById("cantidad")
+    circulo.classList.add('cantidad');
+    circulo.innerHTML = carrito.length;
+  }
+}
