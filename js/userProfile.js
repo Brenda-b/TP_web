@@ -5,14 +5,14 @@ const direccion = document.querySelector("#agregarDireccion")
 const tarjeta = document.querySelector("#agregarTarjeta")
 let regexNumero = /^[0-9]+$/;
 let regexTarjeta = /^\d{10}$/;
-let regexAlias = /^[a-zA-Z._.-]{5,10}$/;
+let regexAlias = /^[a-zA-Z]+$/;
 let regexContra = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
 let regexCod = /^\d{3}$/;
 let regexVenc = /^\d{2}[- /.]\d{2}$/;
 let regexTitular = /^[a-zA-Z._.-]{5,15}$/;
 let regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z._.-]+$/;
-let regexNombre = /^[A-Z]+[a-zA-Z]{5,30}$/;
-let regexApellido = /^[A-Z]+[a-zA-Z]{5,14}$/;
+let regexNombre = /^[a-zA-Z]+$/;
+let regexApellido = /^[a-zA-Z]+$/;
 
 let buenosAires = ["Avellaneda", "Bahía Blanca", "Campana", "Chascomús", "Florencio Varela", "Lanús", "La Matanza", "Morón"]
 let caba = ["Comuna 1", "Comuna 2", "Comuna 3", "Comuna 4", "Comuna 5"];
