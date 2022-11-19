@@ -32,19 +32,28 @@ const contenedorProductos = document.getElementById('contenedor-productos');
     },
 ];*/
 
-let carrito= [];
+let carrito = JSON.parse(sessionStorage.getItem("carrito")) || "";
+if (carrito == "") {
+    carrito = [];
+}
 
-window.addEventListener("load", () =>{
-    let cantidad = JSON.parse(sessionStorage.getItem("carrito"))
-    const circulo = document.getElementById("cantidad");
-    circulo.classList.add('cantidad');
-    circulo.innerHTML = cantidad.length;
+window.addEventListener("load", () => {
+    let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+    if (cantidad == "") {
+        
+    }
+    else{
+        const circulo = document.getElementById("cantidad");
+        circulo.classList.add('cantidad');
+        circulo.innerHTML = cantidad.length;
+    }
+
 })
 
-productos.forEach((articulo) =>{
-    const section= document.createElement('section');
+productos.forEach((articulo) => {
+    const section = document.createElement('section');
     section.classList.add('articulo');
-    section.innerHTML=` 
+    section.innerHTML = ` 
     <article class="popularProduct">
         <div >
         <a href="productView.html"><img src="${articulo.foto}" width= 100%></a>
@@ -60,12 +69,12 @@ productos.forEach((articulo) =>{
     </article>
     <br><br>
     `
-    
-    
+
+
     contenedorProductos.appendChild(section)
 
-    const boton=document.getElementById(`agregar${articulo.id}`);
-    
+    const boton = document.getElementById(`agregar${articulo.id}`);
+
     boton.addEventListener('click', (e) => {
         e.preventDefault();
         agregarAlCarrito(articulo.id);
@@ -74,15 +83,15 @@ productos.forEach((articulo) =>{
         circulo.classList.add('cantidad');
         circulo.innerHTML = carrito.length;
     });
-} );
+});
 
 //Para agregar un cambio
-const agregarAlCarrito= (prodId) => {
+const agregarAlCarrito = (prodId) => {
     //traigo el producto en el que el id coincida con el prodId que recibo por parametro
-    const item= productos.find((prod) => prod.id === prodId)
+    const item = productos.find((prod) => prod.id === prodId)
     carrito.push(item);
-  };
-  
+};
+
 
 
 

@@ -58,48 +58,7 @@
                             <th>Cantidad</th>
                             <th>Precio</th>
                         </tr>
-                        <tr>
-                            <td>Mermelada</td>
-                            <td>2</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>Polenta</td>
-                            <td>2</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>1kg de milanesas</td>
-                            <td>1</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>Agua mineral</td>
-                            <td>1</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>Caja Garotos</td>
-                            <td>1</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>Jabón líquido</td>
-                            <td>2</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
-                        <tr>
-                            <td>1kg de tomate</td>
-                            <td>1</td>
-                            <td>$100</td>
-                            <td><img src="img/icono-basura.png" alt="basura"></td>
-                        </tr>
+                       
                     </table> <br>
                     <div class="submit">
                         <button id="botonPagar">PAGAR</button>
@@ -153,11 +112,16 @@
     }); 
 </script>
 <script>
-    window.addEventListener("load", () =>{
-    let cantidad = JSON.parse(sessionStorage.getItem("carrito"))
-    const circulo = document.getElementById("cantidad");
-    circulo.classList.add('cantidad');
-    circulo.innerHTML = cantidad.length;
+    window.addEventListener("load", () => {
+    let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+    if (cantidad == "") {
+        
+    }
+    else{
+        const circulo = document.getElementById("cantidad");
+        circulo.classList.add('cantidad');
+        circulo.innerHTML = cantidad.length;
+    }
 })
 </script>
 </html>
