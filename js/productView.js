@@ -38,50 +38,6 @@ const aceite = document.querySelector("#aceite_cocinero");
 const arroz = document.querySelector("#arroz_luchetti");
 const capeletinis = document.querySelector("#capelettinis_giacomo");
 
-/*const vistaProducto= document.getElementById("descripcionProducto")
-
-productos.forEach((articulo) =>{
-    const section= document.createElement('section');
-    section.classList.add('articulo');
-    section.innerHTML=` 
-    <article>
-        <div >
-            <div class="productID">
-            <img src="${articulo.foto}">
-            </div>
-            <p id="precio">$${articulo.precio}</p>
-        </div>
-    </article>
-    <article>
-        <h2>${articulo.nombre}</h2>
-        <div id="descripcion">
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-            <p>${articulo.descripcion}</p>
-        </div>
-        <div class="buttonBuy">
-            <form action="#" method="get" id="form">
-                <input type="number" name="cantidadProd" id="cantidadProd" value="1" min="1" max="99">
-                <button id="agregar${articulo.id}">Agregar</button>
-            </form>
-        </div>
-    </article>
-    `
-    
-    
-    contenedorProductos.appendChild(section)
-
-    const boton=document.getElementById(`agregar${articulo.id}`);
-    
-    boton.addEventListener('click', () => {
-        agregarAlCarrito(articulo.id);
-        console.log(carrito)
-    });
-} );*/
 
 aceite.addEventListener("click", (item) => {
     item.preventDefault();
@@ -132,3 +88,25 @@ form.addEventListener("submit", (item) => {
     circulo.innerHTML = cantProd.value;
 });
 
+let carrito = JSON.parse(sessionStorage.getItem("carrito")) || "";
+if (carrito == "") {
+    carrito = [];
+}
+
+//Para agregar un cambio
+const agregarAlCarrito = (prodId) => {
+    //traigo el producto en el que el id coincida con el prodId que recibo por parametro
+    const item = productos.find((prod) => prod.id === prodId)
+    carrito.push(item);
+};
+
+const boton = document.getElementById("agregar");
+
+boton.addEventListener('click', (e) => {
+    e.preventDefault();
+    agregarAlCarrito(productos.id);
+    sessionStorage.setItem("carrito", JSON.stringify(carrito));
+    const circulo = document.getElementById("cantidad")
+    circulo.classList.add('cantidad');
+    circulo.innerHTML = carrito.length;
+});
