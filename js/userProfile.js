@@ -149,6 +149,17 @@ window.addEventListener("load", (e) => {
     }
     //Si esta todo OK, se cargan todos los datos del usuario(nombres, direcciones, tarjetas)
     else {
+        let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+        if (cantidad != "") {
+            const circulo = document.getElementById("cantidad");
+            circulo.classList.add('cantidad');
+            cantidadDeProductos = 0;
+            circulo.innerHTML = cantidad.length;
+            cantidad.forEach((item) => {
+                cantidadDeProductos += item.cant;
+            })
+            circulo.innerHTML = cantidadDeProductos;
+        }
         const titulo = document.querySelector("h2");
         const nombre = JSON.parse(sessionStorage.getItem("actualUser"))
         titulo.innerHTML = nombre.nombre + " " + nombre.apellido;
@@ -209,6 +220,7 @@ function submitUsuario() {
         const nombre = JSON.parse(sessionStorage.getItem("actualUser"))
         titulo.innerHTML = nombre.nombre + " " + nombre.apellido;
         modal2.close();
+        location.reload();
     }
     if (userFound && passwordFound == "0") {
         alert("Usuario o contraseña incorrectos");

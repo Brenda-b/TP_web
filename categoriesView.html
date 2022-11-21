@@ -44,7 +44,7 @@
                 </form>
             </div>
         </nav>
-    </header>
+    </header><br><br>
     <main>
         <h1 class="justifyCenter">CATEGORIAS</h1>
         <section class="inline2 top" id="filtroBuscador">
@@ -150,17 +150,4 @@
     </footer>
 </body>
 <script src="js/categoriesView.js"></script>
-<script>
-    window.addEventListener("load", () => {
-    let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
-    if (cantidad == "") {
-        
-    }
-    else{
-        const circulo = document.getElementById("cantidad");
-        circulo.classList.add('cantidad');
-        circulo.innerHTML = cantidad.length;
-    }
-})
-</script>
 </html>

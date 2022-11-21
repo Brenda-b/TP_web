@@ -169,7 +169,7 @@
         </div>
     </footer>
 </body>
-<script src="js/cartView.js"></script>
+<script src="js/products.js"></script>
 <script src="js/productView.js"></script>
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
@@ -206,18 +206,4 @@
         ]
     });
     </script>
-    <script>
-        window.addEventListener("load", () => {
-        let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
-        if (cantidad == "") {
-            
-        }
-        else{
-            const circulo = document.getElementById("cantidad");
-            circulo.classList.add('cantidad');
-            circulo.innerHTML = cantidad.length;
-        }
-        })
-    </script>
-
 </html>

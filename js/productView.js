@@ -1,112 +1,58 @@
-let productos = [
-    {
-        id: 1,
-        nombre: "Paquete de fideos Matarazzo",
-        foto: `url(img/paquete-de-fideos.jpg)`,
-        descripcion: "fawf awfawfawf awf aw faw fawf awf ",
-        precio: 100
-    },
-    {
-        id: 2,
-        nombre: "Aceite Cocinero",
-        foto: `url(img/aceite-cocinero.webp)`,
-        descripcion: "fawf awfawfawf awf aw faw fawf awf ",
-        precio: 150
-    },
-    {
-        id: 3,
-        nombre: "Arroz Luchetti",
-        foto: `url(img/arroz-luccheti.jpg)`,
-        descripcion: "fawf awfawfawf awf aw faw fawf awf ",
-        precio: 75
-    },
-    {
-        id: 4,
-        nombre: "Capelettinis Giacomo",
-        foto: `img/capeletinis.jpg`,
-        descripcion: "fawf awfawfawf awf aw faw fawf awf ",
-        precio: 300
+window.addEventListener("load", () => {
+    let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+    if (cantidad != "") {
+        const circulo = document.getElementById("cantidad");
+        circulo.classList.add('cantidad');
+        cantidadDeProductos = 0;
+        circulo.innerHTML = cantidad.length;
+        cantidad.forEach((item) => {
+            cantidadDeProductos += item.cant;
+        })
+        circulo.innerHTML = cantidadDeProductos;
     }
-]
+})
+
+
 const form = document.querySelector("#form");
 const titulo = document.querySelector("h2");
 const descripcion = document.querySelector("#descripcion");
 const precio = document.querySelector("#precio");
 const foto = document.querySelector("#productID");
 
-const aceite = document.querySelector("#aceite_cocinero");
-const arroz = document.querySelector("#arroz_luchetti");
-const capeletinis = document.querySelector("#capelettinis_giacomo");
-
-
-aceite.addEventListener("click", (item) => {
-    item.preventDefault();
-    titulo.innerHTML = "";
-    precio.innerHTML = "";
-    let elemento = productos.filter(productos => productos.nombre == "Aceite Cocinero");
-
-    elemento.forEach(item => {
-        titulo.innerHTML = item.nombre;
-        precio.innerHTML = "$" + item.precio;
-        foto.style.backgroundImage = item.foto;
-    });
-})
-
-arroz.addEventListener("click", (item) => {
-    item.preventDefault();
-    titulo.innerHTML = "";
-    precio.innerHTML = "";
-    let elemento = productos.filter(productos => productos.nombre == "Arroz Luchetti");
-
-    elemento.forEach(item => {
-        titulo.innerHTML = item.nombre;
-        precio.innerHTML = "$" + item.precio;
-        foto.style.backgroundImage = item.foto;
-    });
-
-})
-
-capeletinis.addEventListener("click", (item) => {
-    item.preventDefault();
-    titulo.innerHTML = "";
-    precio.innerHTML = "";
-    let elemento = productos.filter(productos => productos.nombre == "Capelettinis Giacomo");
-
-    elemento.forEach(item => {
-        titulo.innerHTML = item.nombre;
-        precio.innerHTML = "$" + item.precio;
-        foto.style.backgroundImage = item.foto;
-    });
-
-})
-//funcionalidad del carrito
-form.addEventListener("submit", (item) => {
-    item.preventDefault();
-    const circulo = document.querySelector("#cantidad")
-    const cantProd = document.querySelector("#cantidadProd")
-    circulo.classList.add('cantidad');
-    circulo.innerHTML = cantProd.value;
-});
-
 let carrito = JSON.parse(sessionStorage.getItem("carrito")) || "";
 if (carrito == "") {
     carrito = [];
 }
 
-//Para agregar un cambio
-const agregarAlCarrito = (prodId) => {
-    //traigo el producto en el que el id coincida con el prodId que recibo por parametro
-    const item = productos.find((prod) => prod.id === prodId)
-    carrito.push(item);
-};
-
 const boton = document.getElementById("agregar");
+const inputCantidad = document.getElementById ("cantidadProd");
+let articulo = productos.find (((prod) => prod.id === 1))
 
 boton.addEventListener('click', (e) => {
     e.preventDefault();
-    agregarAlCarrito(productos.id);
+    agregarAlCarrito(articulo.id, inputCantidad);
     sessionStorage.setItem("carrito", JSON.stringify(carrito));
     const circulo = document.getElementById("cantidad")
     circulo.classList.add('cantidad');
-    circulo.innerHTML = carrito.length;
+    cantidadDeProductos = 0;
+    circulo.innerHTML = cantidad.length;
+    carrito.forEach((item) => {
+        cantidadDeProductos += item.cant;
+    })
+    circulo.innerHTML = cantidadDeProductos;
 });
+
+const agregarAlCarrito = (prodId, inputCantidad) => {
+    const existe = carrito.some(prod => prod.id === prodId) 
+    if (existe) { 
+        const prod = carrito.map(prod => {
+            if (prod.id === prodId) {
+                prod.cant += parseInt(inputCantidad.value)
+            }
+        })
+    } else { 
+        const item = productos.find((prod) => prod.id === prodId)
+        item.cant = parseInt(inputCantidad.value)
+        carrito.push(item)
+    }
+};

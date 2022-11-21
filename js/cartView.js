@@ -1,5 +1,19 @@
 const pagar = document.querySelector("#botonPagar")
 
+window.addEventListener("load", () => {
+  let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+  if (cantidad != "") {
+      const circulo = document.getElementById("cantidad");
+      circulo.classList.add('cantidad');
+      cantidadDeProductos = 0;
+      cantidad.forEach((item) => {
+          cantidadDeProductos += item.cant;
+      })
+      console.log(cantidadDeProductos)
+      circulo.innerHTML = cantidadDeProductos;
+  }
+})
+
 pagar.addEventListener("click", (e) => {
   e.preventDefault();
   modal.setContent(`<div class="textIcon2">
@@ -112,7 +126,7 @@ function crearFilaArticulo(nombre, cant, precio, id) {
   let column4 = document.createElement("td")
   let texto1 = document.createTextNode(nombre);
   let texto2 = document.createTextNode(cant);
-  let texto3 = document.createTextNode(precio);
+  let texto3 = document.createTextNode("$" + precio * cant);
   let botonBorrar = document.createElement("a");
   let trashCan = document.createElement("img");
   trashCan.src = "img/icono-basura.png";
