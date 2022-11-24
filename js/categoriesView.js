@@ -33,6 +33,20 @@ const categorias = [
     }
 ]
 
+window.addEventListener("load", () => {
+    let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+    if (cantidad != "") {
+        const circulo = document.getElementById("cantidad");
+        circulo.classList.add('cantidad');
+        cantidadDeProductos = 0;
+        cantidad.forEach((item) => {
+            cantidadDeProductos += item.cant;
+        })
+        console.log(cantidadDeProductos)
+        circulo.innerHTML = cantidadDeProductos;
+    }
+  })
+
 const resultado = document.querySelector("#filtroBuscador");
 const buscador = document.querySelector("#buscar");
 if (buscador != 0) {

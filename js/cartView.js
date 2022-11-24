@@ -1,5 +1,10 @@
 const pagar = document.querySelector("#botonPagar")
 
+window.addEventListener("load", () => {
+  let cantidad = JSON.parse(sessionStorage.getItem("carrito")) || ""
+  actualizarCantidad(cantidad);
+})
+
 pagar.addEventListener("click", (e) => {
   e.preventDefault();
   modal.setContent(`<div class="textIcon2">
@@ -94,7 +99,6 @@ window.addEventListener("load", () => {
 
 function imprimirCarrito() {
   const carrito = JSON.parse(sessionStorage.getItem("carrito")) || "";
-  console.log(carrito)
   if (carrito != "") {
     carrito.forEach((item) => {
       crearFilaArticulo(item.nombre, item.cant, item.precio, item.id);
@@ -112,7 +116,7 @@ function crearFilaArticulo(nombre, cant, precio, id) {
   let column4 = document.createElement("td")
   let texto1 = document.createTextNode(nombre);
   let texto2 = document.createTextNode(cant);
-  let texto3 = document.createTextNode(precio);
+  let texto3 = document.createTextNode("$" + precio * cant);
   let botonBorrar = document.createElement("a");
   let trashCan = document.createElement("img");
   trashCan.src = "img/icono-basura.png";
@@ -139,8 +143,19 @@ function crearFilaArticulo(nombre, cant, precio, id) {
     let indexCarrito = carrito.findIndex(element => element.id === articuloID);
     carrito.splice(indexCarrito, 1);
     sessionStorage.setItem("carrito", JSON.stringify(carrito));
-    const circulo = document.getElementById("cantidad")
+    actualizarCantidad(carrito);
+  }
+}
+
+function actualizarCantidad(cantidad) {
+  if (cantidad != "") {
+    const circulo = document.getElementById("cantidad");
     circulo.classList.add('cantidad');
-    circulo.innerHTML = carrito.length;
+    cantidadDeProductos = 0;
+    circulo.innerHTML = cantidad.length;
+    cantidad.forEach((item) => {
+      cantidadDeProductos += item.cant;
+    })
+    circulo.innerHTML = cantidadDeProductos;
   }
 }
